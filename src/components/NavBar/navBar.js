@@ -3,9 +3,10 @@ import style from "./navBar.module.css"
 
 const navBar = ()=>{
     return (
-        
+        <div>
+            <p>This is a navBar</p>
+        </div>
     )
-    <a>This is a navBar</a>
 }
 
 export default navBar
