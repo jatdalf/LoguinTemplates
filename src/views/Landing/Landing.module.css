@@ -1,16 +1,3 @@
-.landingVideo{
-    position:absolute;
-    z-index:-1;
-    top:0;
-    left:0;
-    width:100%; 
-    height:100vh;
-}
-
-body{
-    background-color: black;
-}
-
 .homeButton{
     position: absolute;
     top: 50%;    

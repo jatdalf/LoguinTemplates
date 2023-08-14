@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import style from "./Landing.module.css"
 
-const Landing = () =>{
+export const Landing = () =>{
     return(        
         <div > 
-            <a>This is landing</a>
+            <h2>This is landing</h2>
             {/* <Link to="/Home"  >
                 <button className={style.homeButton}> Home </button>
             </Link> */}
@@ -12,4 +12,4 @@ const Landing = () =>{
     )
 }
 
-export default Landing;
+// export default Landing;
