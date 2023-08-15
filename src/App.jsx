@@ -1,20 +1,17 @@
 import './App.css'
-import { Landing } from '../src/views/Landing/Landing';
-// import {Landing, Home } from "./views"
+//import { Landing } from '../src/views/Landing/Landing';
+//import {Home } from "./views/Home/Home"
 //import NavBar from "./components/navBar/navBar.js"
-import { Route, useLocation, Link } from 'react-router-dom';
+import { Route, Routes, useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 
 
 function App() {  
   const location = useLocation();
-  return (
-    <div className="card">
+  return (  
+    <div>
       <h1>Loguin Templates</h1>
-        {/* {location.pathname !== "/" && <NavBar />}  */}
-        {/* <Route exact path="/" render = {()=> <Landing/>}/> */}
-        {/* <Route path="/home" render = {()=> <Home/>}/>        */}      
-    </div>       
+    </div>     
   )
 }
 
