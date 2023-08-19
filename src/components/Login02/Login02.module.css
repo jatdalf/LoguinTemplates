@@ -1,0 +1,104 @@
+
+@keyframes spin3D {
+    from { transform: rotateY(0deg) }
+    to { transform: rotateY(360deg) }
+  }
+
+.spinhov3D{
+    margin-bottom: 2rem;
+    height: 5em;
+    animation-name: spin3D;
+    animation-duration: 2s;    
+    animation-iteration-count: 99;
+    animation-timing-function: ease-in-out;
+}
+
+.Login2_body {
+  height: 100%;
+  background-color: #ffffff;
+  color:  #0098A7;
+  font: rgb(0, 0, 0) 1rem/1.5 Helvetica Neue, sans-serif;
+  margin: 0;
+  min-height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.align_Center {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.align_end {
+      align-self: flex-end;
+    }
+
+.align_item {
+   align-self: flex-start;
+}
+
+input {
+  border: 0;
+  font: inherit;
+}
+
+.inputPlaceholder{
+    color: #7e8ba3;
+}
+
+.form__field {
+    margin-bottom: 1rem;
+}
+
+.form__Input {
+    outline: 0;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+.grid {
+  margin: 0 auto;
+  max-width: 25rem;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2.75rem;
+  font-weight: 100;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+svg {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  color: #7e8ba3;
+}
+
+.register {
+  box-shadow: 0 0 250px #000;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.register_input {
+    border: 1px solid #242c37;
+    border-radius: 999px;
+    background-color: transparent;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 1rem 50%;
+}
+
+.register_submit {
+      background-image: linear-gradient(160deg, #8ceabb 0%, #378f7b 100%);
+      color: #fff;
+      margin-bottom: 6rem;
+      width: 100%;
+    }

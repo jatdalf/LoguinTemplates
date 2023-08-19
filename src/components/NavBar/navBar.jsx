@@ -1,7 +1,7 @@
 import style from "./navBar.module.css"
-import { HomeTwoTone, EditTwoTone, CheckCircleTwoTone } from '@ant-design/icons';
+import { HomeTwoTone, EditTwoTone, CheckCircleTwoTone, IdcardTwoTone } from '@ant-design/icons';
 import { Menu } from 'antd';
-import { useState } from 'react';
+import { Children, useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
 
@@ -15,11 +15,31 @@ const Header = () => {
     <>
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
       <Menu.Item key="h" icon= {<HomeTwoTone />}>
-       <Link to="/">Home</Link>
+       <Link to="/">Home</Link>       
       </Menu.Item>
+      
+      <Menu.SubMenu title="Logins List" style={{ marginLeft: 'auto' }}>
+        <Menu.Item key="1" icon= {<IdcardTwoTone />} >
+        <Link to="/Login01">Login 1</Link>
+        </Menu.Item>
+        <Menu.Item key="2" icon= {<IdcardTwoTone />} >
+        <Link to="/Login02">Login 2</Link>
+        </Menu.Item>
+        <Menu.Item key="3" icon= {<IdcardTwoTone />} >
+        <Link to="/Login03">Login 3</Link>
+        </Menu.Item>
+        <Menu.Item key="4" icon= {<IdcardTwoTone />} >
+        <Link to="/Login04">Login 4</Link>
+        </Menu.Item>
+        <Menu.Item key="5" icon= {<IdcardTwoTone />} >
+        <Link to="/Login05">Login 5</Link>
+        </Menu.Item>
+      </Menu.SubMenu>
+
       <Menu.Item key="r" icon= {<EditTwoTone />} style={{ marginLeft: 'auto' }}>
         <Link to="/register">Register</Link>
       </Menu.Item>
+      
       <Menu.Item key="l" icon= {<CheckCircleTwoTone />} >
         <Link to="/login">Login</Link>
       </Menu.Item>
