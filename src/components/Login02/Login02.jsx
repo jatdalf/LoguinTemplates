@@ -10,11 +10,11 @@ const Loguin001 = () => {
       <img src={LogoImg} className={style.spinhov3D} alt="Logo small Ocasa" />
         <h2 class={style.loginH2}>Welcome</h2>
         <form action="" method="post" class="form">
-          <div >
+          <div class={style.form__field}>
             <input  class={style.form__Input} type="email" placeholder="user@mailAddress.com"/>
           </div>
-          <div class={style.register}>
-            <input type="password" placeholder="*************"/>
+          <div class={style.form__field}>
+            <input class={style.form__Input} type="password" placeholder="*************"/>
           </div>
 
           <div class={style.register_submit}>
