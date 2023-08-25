@@ -4,24 +4,21 @@ import LogoImg from "../../assets/OcasaLogoSmall.png"
 
 const Loguin001 = () => {
   return (
-  <div class={style.centrado}>
-    <div class={style.align_Center}>
-      <div class={style.register}>
+  <div className={style.centrado}>
+    <div className={style.align_Center}>
+      <div className={style.register}>
       <img src={LogoImg} className={style.spinhov3D} alt="Logo small Ocasa" />
-        <h2 class={style.loginH2}>Welcome</h2>
-        <form action="" method="post" class="form">
-          <div class={style.form__field}>
-            <input  class={style.form__Input} type="email" placeholder="user@mailAddress.com"/>
+        <h2 className={style.loginH2}>Welcome</h2>
+        <form >
+          <div className={style.form__field}>
+            <input className={style.form__Input} type="email" placeholder="user@mailAddress.com"/>
           </div>
-          <div class={style.form__field}>
-            <input class={style.form__Input} type="password" placeholder="*************"/>
+          <div className={style.form__field}>
+            <input className={style.form__Input} type="password" placeholder="*************"/>
           </div>
-
-          <div class={style.register_submit}>
-            <input type="submit" value="Log In"/>
-            
+          <div className={style.register_submit}>
+            <input className={style.logInButton} type="submit" value="Log In"/>
           </div>
-
         </form>
         <p>Enter username and password</p>
       </div>
