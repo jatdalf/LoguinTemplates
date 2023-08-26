@@ -5,9 +5,51 @@
     left: 0px; 
     top: 0px; 
     z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+    
 }
 
 .stretch {
     width:100%;
     height:100%;
 }
+.centrado{    
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: rgba(255, 255, 255, 0.85);  
+    color:  #0098A7;
+    margin: 0 auto;    
+    width: 30%;
+    position: relative;
+    margin-top: 8%;
+}
+.l1H2{
+    font-weight: bold;
+    margin-bottom: -2px;
+    text-align: center;
+}
+.l1imput{
+    margin-bottom: 4;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: .4rem 0.2rem;    
+    background-color: #e0f2f3;
+   }
+.l1hr{
+    height:  4px;
+}
+.l1chkbox{
+    margin: 10%;
+}
+.l1btn{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: 800;
+    padding: .3rem 6rem;
+    border-radius: 999px;
+    background-color: #5dbdbf;  
+    width: 50%;
+    border-color: transparent;
+  }
