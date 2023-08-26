@@ -1,6 +1,7 @@
 import React from 'react'
 import style from "./Login02.module.css"
 import LogoImg from "../../assets/OcasaLogoSmall.png"
+import { Link } from 'react-router-dom';
 
 const Loguin001 = () => {
   return (
@@ -17,7 +18,9 @@ const Loguin001 = () => {
             <input className={style.form__Input} type="password" placeholder="*************"/>
           </div>
           <div className={style.register_submit}>
-            <input className={style.logInButton} type="submit" value="Log In"/>
+            <Link to="/">
+              <input className={style.logInButton} type="submit" value="Log In"/>
+            </Link>
           </div>
         </form>
         <p>Enter username and password</p>
