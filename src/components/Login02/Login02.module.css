@@ -68,3 +68,6 @@
   width: 100%;
   border-color: transparent;
 }
+.logInButton:hover{
+  color:rgb(66, 77, 77);
+}

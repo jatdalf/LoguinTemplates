@@ -12,6 +12,7 @@ import {
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom';
 
 const Loguin001 = () => {
   return (
@@ -30,10 +31,12 @@ const Loguin001 = () => {
               <MDBInput className={style.l1imput} label='Email address' id='formControlLg' type='email' size="lg"/>
               <MDBInput className={style.l1imput} label='Password' id='formControlLg' type='password' size="lg"/>
               <MDBCheckbox name='flexCheck' id='flexCheckDefault' className={style.l1chkbox} label='Remember me' />
-              <MDBBtn className={style.l1btn} size='lg' >
-                Login
-              </MDBBtn>
-              <hr className={style.l1hr}/>
+              <Link to="/">
+                <button className={style.l1btn} size='lg' >
+                  Login
+                </button>
+              </Link>
+              <hr className={style.l1hr}/>  
 
             </MDBCardBody>
           </MDBCard>

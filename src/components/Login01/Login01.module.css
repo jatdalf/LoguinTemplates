@@ -53,3 +53,7 @@
     width: 50%;
     border-color: transparent;
   }
+  .l1btn:hover{
+    background-color: #023d3e; 
+    color: white;
+  }
