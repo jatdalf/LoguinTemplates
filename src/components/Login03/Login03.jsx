@@ -3,7 +3,9 @@ import style from "./Login03.module.css"
 
 const Loguin001 = () => {
   return (
-    <div>Login03</div>
+    <div>
+      Login03
+    </div>
   )
 }
 
