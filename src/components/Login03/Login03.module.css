@@ -30,7 +30,7 @@
     cursor: pointer;
     font-size: 14px;
     text-align: center;
-}
+    }
 div.active{
     background: #ccc;
     width: 15px;
