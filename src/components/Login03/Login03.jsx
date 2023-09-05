@@ -18,6 +18,7 @@ const Loguin001 = () => {
   },[currentImgIndex])
 
   const goToImg=(imgIdx) =>{setCurrentImgIndex(imgIdx)}
+  
 
   return (
     <div className={style.mainContainer}>
