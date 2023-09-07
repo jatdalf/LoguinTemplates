@@ -18,7 +18,8 @@ const Loguin001 = () => {
   },[currentImgIndex])
 
   const goToImg=(imgIdx) =>{setCurrentImgIndex(imgIdx)}
-  
+  const isSelected = true;
+  const conditionalStyle = isSelected ? style.active : ""
 
   return (
     <div className={style.mainContainer}>
@@ -37,7 +38,7 @@ const Loguin001 = () => {
         <div className={style.dotsContainer}>
           {
             carrouselData.map((_, idx) =>(
-              <div key={idx} className={style.dotCss}
+              <div key={idx} className={'${style.dotCss} '}
                 onClick={()=>goToImg(idx)}>&#9864;</div>
             ))            
           }
