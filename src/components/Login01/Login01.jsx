@@ -14,7 +14,7 @@ import {
 from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
 
-const Loguin001 = () => {
+const Loguin01 = () => {
   return (
     <MDBContainer fluid >
       <MDBRow className={style.centrado}>
@@ -46,4 +46,4 @@ const Loguin001 = () => {
   )
 }
 
-export default Loguin001
+export default Loguin01

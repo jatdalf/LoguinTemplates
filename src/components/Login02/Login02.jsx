@@ -3,7 +3,7 @@ import style from "./Login02.module.css"
 import LogoImg from "../../assets/OcasaLogoSmall.png"
 import { Link } from 'react-router-dom';
 
-const Loguin001 = () => {
+const Loguin02 = () => {
   return (
   <div className={style.centrado}>
     <div className={style.align_Center}>
@@ -30,4 +30,4 @@ const Loguin001 = () => {
   )
 }
 
-export default Loguin001
+export default Loguin02

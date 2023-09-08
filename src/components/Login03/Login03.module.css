@@ -24,16 +24,20 @@
 .dotsContainer{
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 .dotsCss{
-    margin: 8px 3px;
-    cursor: pointer;
+    margin: 8px 3px;    
     font-size: 14px;
     text-align: center;
     }
+
 .active{
-    background: #ccc;
-    width: 15px;
-    height: 15px;
+    background: rgb(181, 166, 166);
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
+    position: relative;
+    top: 3px;
+   
 }
