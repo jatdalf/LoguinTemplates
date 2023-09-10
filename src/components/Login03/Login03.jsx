@@ -51,8 +51,7 @@ const Login03 = () => {
             <div
               key={idx}
               className={`${style.dotCss} ${idx === currentImgIndex ? style.active : ""}`}
-              onClick={() => goToImg(idx)}
-            >
+              onClick={() => goToImg(idx)}            >
               &#9864;
             </div>
           ))}
