@@ -25,19 +25,14 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
+    color: gray;
 }
 .dotsCss{
     margin: 8px 3px;    
     font-size: 14px;
-    text-align: center;
+    text-align: center;    
     }
 
 .active{
-    background: rgb(181, 166, 166);
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    position: relative;
-    top: 3px;
-   
+    color: black;
 }
