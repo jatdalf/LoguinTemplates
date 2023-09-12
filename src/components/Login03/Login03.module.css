@@ -37,22 +37,31 @@
     color: black;
 }
 .loginForm {
-    margin-top: 20px;
-    padding: 20px;
+    position: relative ;
+    margin-top: -350px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f8f8f8;
+    left: 495px;
+    width: 275px;
+    height: 353px;
   }
   
   .loginForm input {
-    width: 100%;
+    width: 95%;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
+    position: relative;
+    top: 100px;
+    float: left;
   }
   
   .loginForm button {
+    position: relative;
+    top: 130px;
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;

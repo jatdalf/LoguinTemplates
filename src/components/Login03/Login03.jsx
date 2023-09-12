@@ -22,13 +22,13 @@ const Login03 = () => {
     setCurrentImgIndex(imgIdx);
   };
 
-  // Función para avanzar automáticamente las imágenes cada 2 segundos
+  // Función para avanzar automáticamente las imágenes cada 3 segundos
   useEffect(() => {
     const intervalId = setInterval(() => {
       // Calcular el próximo índice de imagen
       const nextIndex = (currentImgIndex + 1) % carrouselData.length;
       setCurrentImgIndex(nextIndex);
-    }, 2000); // Intervalo de 2000 milisegundos (2 segundos)
+    }, 3000); // Intervalo de 3000 milisegundos (3 segundos)
 
     return () => {
       // Limpiar el intervalo cuando el componente se desmonte
