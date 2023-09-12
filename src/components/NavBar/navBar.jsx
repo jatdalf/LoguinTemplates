@@ -20,19 +20,19 @@ const Header = () => {
       
       <Menu.SubMenu key="s" title="Logins List" style={{ marginLeft: 'auto' }}>
         <Menu.Item key="1" icon= {<IdcardTwoTone />} >
-        <Link to="/Login01">Login 1</Link>
+        <Link to="/Login01">background Image</Link>
         </Menu.Item>
         <Menu.Item key="2" icon= {<IdcardTwoTone />} >
-        <Link to="/Login02">Login 2</Link>
+        <Link to="/Login02">Animated Logo</Link>
         </Menu.Item>
         <Menu.Item key="3" icon= {<IdcardTwoTone />} >
-        <Link to="/Login03">Login 3</Link>
+        <Link to="/Login03">Carousel</Link>
         </Menu.Item>
         <Menu.Item key="4" icon= {<IdcardTwoTone />} >
-        <Link to="/Login04">Login 4</Link>
+        <Link to="/Login04">background video</Link>
         </Menu.Item>
         <Menu.Item key="5" icon= {<IdcardTwoTone />} >
-        <Link to="/Login05">Login 5</Link>
+        <Link to="/Login05">Matrix Style</Link>
         </Menu.Item>
       </Menu.SubMenu>
 
