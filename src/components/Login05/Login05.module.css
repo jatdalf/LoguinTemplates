@@ -3,3 +3,67 @@
     background: #000;
     display: block;
 }
+.formContainer {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    bottom: 20%;
+    right: 0;
+    margin: auto;
+    background-color: rgba(0, 252, 206, 0.9);
+    opacity: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 44vh;
+  }
+  
+  .formContainer h2 {
+    opacity: 100%;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  .inputContainer {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+.login5Label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+.login5Button {
+    position: relative;
+    top: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #caa617;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+.login5Button:hover {
+    background-color: #ebc90c;
+    color:rgb(5, 5, 5);
+    text-shadow: 2px 2px 3px white;
+  }
