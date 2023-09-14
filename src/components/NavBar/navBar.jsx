@@ -34,6 +34,15 @@ const Header = () => {
         <Menu.Item key="5" icon= {<IdcardTwoTone />} >
         <Link to="/Login05">Matrix Style</Link>
         </Menu.Item>
+        <Menu.Item key="6" icon= {<IdcardTwoTone />} >
+        <Link to="/Login06">6</Link>
+        </Menu.Item>
+        <Menu.Item key="7" icon= {<IdcardTwoTone />} >
+        <Link to="/Login07">7</Link>
+        </Menu.Item>
+        <Menu.Item key="8" icon= {<IdcardTwoTone />} >
+        <Link to="/Login08">8</Link>
+        </Menu.Item>
       </Menu.SubMenu>
 
       <Menu.Item key="r" icon= {<EditTwoTone />} style={{ marginLeft: 'auto' }}>
