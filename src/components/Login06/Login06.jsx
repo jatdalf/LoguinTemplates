@@ -3,7 +3,11 @@ import style from './Login06.module.css';
 
 const Login06 = () => {
     return(
-        <div>Login6</div>
+        <div className={style.loginContainer}>
+            <div className={style.auroraBorealis}>
+                Login6
+            </div>
+        </div>
     )
 }
 

@@ -1,24 +1,37 @@
-.aurora-borealis {
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .auroraBorealis {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background: linear-gradient(#05051f, #05051f, #97f7f3, #05051f, #05051f, #05051f, #76f6bd, #aaebc9, #05051f, #05051f, #69c1ff, #cb304f, #05051f, #05051f, #05051f, #05051f, #4a5b8f, #419f91, #05051f, #05051f, #3a4aa1, #db3b69, #05051f);
     background-size: 1800% 1800%;
     -webkit-animation: Aurora 180s ease;
     -moz-animation: Aurora 180s ease;
-    animation: Aurora 180s ease;
-animation-iteration-count: 1;
-}
-
-@-webkit-keyframes Aurora {
-    0%{background-position:18% 0%}
-    50%{background-position:83% 100%}
-    100%{background-position:18% 0%}
-}
-@-moz-keyframes Aurora {
-    0%{background-position:18% 0%}
-    50%{background-position:83% 100%}
-    100%{background-position:18% 0%}
-}
-@keyframes Aurora { 
-    0%{background-position:18% 0%}
-    50%{background-position:83% 100%}
-    100%{background-position:18% 0%}
-}
+    animation: Aurora 180s linear infinite;    
+  }
+  
+  @-webkit-keyframes Aurora {
+    0% { background-position: 18% 0% }
+    50% { background-position: 83% 100% }
+    100% { background-position: 18% 0% }
+  }
+  
+  @-moz-keyframes Aurora {
+    0% { background-position: 18% 0% }
+    50% { background-position: 83% 100% }
+    100% { background-position: 18% 0% }
+  }
+  
+  @keyframes Aurora {
+    0% { background-position: 18% 0% }
+    50% { background-position: 83% 100% }
+    100% { background-position: 18% 0% }
+  }
