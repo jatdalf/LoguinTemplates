@@ -6,7 +6,7 @@ import { useState } from "react"
 
 const CardContainer = ()=>{
     //const Countries = useSelector(state => state.Countries)
-    const LoguinTemplates = 1
+    const LoguinTemplates = 8
     //pagination data
     const [currentPage, setCurrentPage] = useState (1)
     const [cardPerPage] = useState (9)
