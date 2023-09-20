@@ -5,7 +5,8 @@ import Pagination from "../Pagination/pager"
 import { useState } from "react"
 
 const CardContainer = ()=>{
-    //const Countries = useSelector(state => state.Countries)
+    const cardData = {
+          }
     const LoguinTemplates = 8
     //pagination data
     const [currentPage, setCurrentPage] = useState (1)
@@ -19,7 +20,7 @@ const CardContainer = ()=>{
     return (
         <div>
             <Pagination 
-                totalCards={Countries.length} 
+                totalCards={cardData.length} 
                 cardPerPage={cardPerPage}                                 
                 setCurrentPage={setCurrentPage}
                 currentPage={currentPage}/>                       
