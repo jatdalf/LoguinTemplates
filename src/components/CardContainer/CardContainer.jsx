@@ -5,8 +5,49 @@ import Pagination from "../Pagination/pager"
 import { useState } from "react"
 
 const CardContainer = ()=>{
-    const cardData = {
-          }
+    const cardData = [
+        {
+            id:1,
+            name:"background Image",
+            cardImg: ""
+        },
+        {
+            id:2,
+            name:"Animated Logo",
+            cardImg: ""
+        },
+        {
+            id:3,
+            name:"Carousel",
+            cardImg: ""
+        },
+        {
+            id:4,
+            name:"Background video",
+            cardImg: ""
+        },
+        {
+            id:5,
+            name:"Matrix Style",
+            cardImg: ""
+        },
+        {
+            id:6,
+            name:"",
+            cardImg: ""
+        },
+        {
+            id:7,
+            name:"",
+            cardImg: ""
+        },
+        {
+            id:8,
+            name:"",
+            cardImg: ""
+        },
+
+        ];
     const LoguinTemplates = 8
     //pagination data
     const [currentPage, setCurrentPage] = useState (1)
@@ -25,18 +66,12 @@ const CardContainer = ()=>{
                 setCurrentPage={setCurrentPage}
                 currentPage={currentPage}/>                       
         <div className={style.CardContainer}>          
-            {currentCard.map(country =>{
+            {currentCard.map(cardData =>{
                 return <Card
-                key= {country.ID}
-                ID= {country.ID}
-                name= {country.name}
-                flag_img= {country.flag_img}
-                continent= {country.continent}
-                capital= {country.capital}
-                subregion= {country.subregion}
-                area= {country.area}
-                population= {country.population}
-                activities= {country.activities}
+                key= {cardData.id}
+                ID= {cardData.id}
+                name= {cardData.name}
+                cardImg= {cardData.cardImg}               
                 />})            
             }        
         </div>            

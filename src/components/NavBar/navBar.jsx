@@ -29,13 +29,13 @@ const Header = () => {
         <Link to="/Login03">Carousel</Link>
         </Menu.Item>
         <Menu.Item key="4" icon= {<IdcardTwoTone />} >
-        <Link to="/Login04">background video</Link>
+        <Link to="/Login04">Background video</Link>
         </Menu.Item>
         <Menu.Item key="5" icon= {<IdcardTwoTone />} >
         <Link to="/Login05">Matrix Style</Link>
         </Menu.Item>
         <Menu.Item key="6" icon= {<IdcardTwoTone />} >
-        <Link to="/Login06">6</Link>
+        <Link to="/Login06">Future</Link>
         </Menu.Item>
         <Menu.Item key="7" icon= {<IdcardTwoTone />} >
         <Link to="/Login07">7</Link>
