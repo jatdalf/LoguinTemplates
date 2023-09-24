@@ -38,7 +38,7 @@ const Header = () => {
         <Link to="/Login06">Future</Link>
         </Menu.Item>
         <Menu.Item key="7" icon= {<IdcardTwoTone />} >
-        <Link to="/Login07">7</Link>
+        <Link to="/Login07">Neon Lights</Link>
         </Menu.Item>
         <Menu.Item key="8" icon= {<IdcardTwoTone />} >
         <Link to="/Login08">8</Link>

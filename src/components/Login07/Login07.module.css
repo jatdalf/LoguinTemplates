@@ -1,0 +1,124 @@
+@import url(//fonts.googleapis.com/css?family=Vibur);
+
+.NeonBody {
+  background-color: #112; 
+  background-size:cover;
+  background-repeat: no-repeat;    
+}
+.logo {
+  text-align: center;
+  width: 65%;
+  height: 250px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   user-select: none;
+}
+
+.logo b{
+  font: 400 10vh "Vibur";
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+.logo b span{
+  animation: blink linear infinite 2s;
+}
+.logo b span:nth-of-type(2){
+  animation: blink linear infinite 3s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79%{
+     color: #333;
+  }
+  80% {
+    
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+.neonImput{
+  font-family: 'Exo 2', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  background: #000;
+  min-height: 100vh;
+}
+
+.loginForm {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    text-align: center;
+  }
+  
+  .loginForm label {
+    display: block;
+    font-size: 18px;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+    margin-bottom: 10px;
+  }
+  
+  .loginForm input[type="text"],
+  .loginForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-bottom: 2px solid #0ff;
+    color: #0ff;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .loginForm input[type="text"]::placeholder,
+  .loginForm input[type="password"]::placeholder {
+    color: #0ff;
+  }
+  
+  .loginForm button {
+    background-color: #0ff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loginForm button:hover {
+    background-color: #00c;
+  }
+
