@@ -24,33 +24,33 @@ const Login07 = () => {
 
   return (
     <div className={style.NeonBody}>
-      <img src={bgImage} alt="Fondo de ladrillos oscuros" />
+      <img className={style.neonImg} src={bgImage} alt="Fondo de ladrillos oscuros" />
       <div className={style.loginContainer}>
         <div className={style.logo}>
           <b>W<span>el</span>c<span>om</span>e</b>
         </div>
-            <form className={style.loginForm} onSubmit={handleSubmit}>
-                <div className={style.formGroup}>
-                    <label htmlFor="username">Usuario:</label>
-                    <input
+            <form onSubmit={handleSubmit}>
+                <div className={style.neonImput}>
+                    <label htmlFor="username">USERNAME:</label>
+                    <input className={style.neonImputText}
                         type="text"
                         id="username"
-                        placeholder="Nombre de usuario"
+                        placeholder="Username"
                         value={username}
                         onChange={handleUsernameChange}
                     />
                 </div>
-                <div className={style.formGroup}>
-                    <label htmlFor="password">Contraseña:</label>
-                    <input
+                <div className={style.neonImput2}>
+                    <label htmlFor="password">Password:</label>
+                    <input className={style.neonImputText}
                         type="password"
                         id="password"
-                        placeholder="Contraseña"
+                        placeholder="Password"
                         value={password}
                         onChange={handlePasswordChange}
                     />
                 </div>
-                <button type="submit">Iniciar Sesión</button>
+                <button className={style.neonSubmit} type="submit">Submit</button>
             </form>
       </div>
     </div>

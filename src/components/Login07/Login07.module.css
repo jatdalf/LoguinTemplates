@@ -15,7 +15,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-   user-select: none;
+  user-select: none;
 }
 
 .logo b{
@@ -63,62 +63,142 @@
   }
 }
 
-.neonImput{
-  font-family: 'Exo 2', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  background: #000;
-  min-height: 100vh;
-}
-
-.loginForm {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    text-align: center;
-  }
-  
-  .loginForm label {
-    display: block;
-    font-size: 18px;
-    color: #0ff;
-    text-shadow: 0 0 10px #0ff;
-    margin-bottom: 10px;
-  }
-  
-  .loginForm input[type="text"],
-  .loginForm input[type="password"] {
+.neonImg {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background: rgba(0, 0, 0, 0.8);
-    border: none;
-    border-bottom: 2px solid #0ff;
-    color: #0ff;
-    font-size: 16px;
+    height: 100%;
+    z-index: -1; /* Establece un z-index para que la imagen esté detrás de otros elementos */
+  }
+
+.neonImput{
+    font-family: 'Exo 2', sans-serif;
+    position: absolute;
+    top: 44%;     
+    display: flex;
+    left: 30%;
+    align-items: center;    
+    color: #fff;
+    padding: 1rem 3rem 1rem;
+    border: 0.4rem solid #fff;
+    border-radius: 2rem; 
+    animation: flicker 1.5s infinite alternate;  
+    width: 33%;    
+  }
+
+  .neonImput label,  .neonImput2 label{
+    color: #faa9a9;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-style: italic;   
+    text-transform: uppercase;       
+  }
+
+  .neonImput::-moz-selection {
+    background-color: #08f;
+    color: #f40;
+  }
+  .neonImput::selection {
+    background-color: #08f;
+    color: #f40;
+  }
+  .neonImput:focus {
     outline: none;
   }
-  
-  .loginForm input[type="text"]::placeholder,
-  .loginForm input[type="password"]::placeholder {
-    color: #0ff;
-  }
-  
-  .loginForm button {
-    background-color: #0ff;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .loginForm button:hover {
-    background-color: #00c;
+  @keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem #f40,
+            0 0 4rem #f40,
+            0 0 6rem #f40,
+            0 0 8rem #f40,
+            0 0 10rem #f40;
+        
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem #08f,
+            inset 0 0 2rem #08f,
+            0 0 4rem #08f,
+            inset 0 0 4rem #08f;        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+
+.neonImput2{
+    font-family: 'Exo 2', sans-serif;
+    position: absolute;
+    top: 60%;     
+    display: flex;
+    left: 30%;
+    align-items: center;    
+    color: rgb(255, 255, 255);
+    padding: 1rem 3rem 1rem;
+    border: 0.4rem solid #fff;
+    border-radius: 2rem; 
+    animation: flicker 1.5s infinite alternate;  
+    width: 33%;
+    text-align: center;    
   }
 
+  .neonSubmit{
+    position: absolute;
+    top: 80%;     
+    display: flex;
+    left: 45%;
+    font-size: 2em;
+    align-items: center;    
+    animation:lightson .5s ease 3 forwards;
+  }
+  .neonSubmit:hover{
+    color: gold;
+    animation: flicker 1.5s infinite alternate;  
+  }
+
+  .neonImputText{
+    color:white;
+    padding:0rem 2rem;
+    border: 10px solid white;
+    text-align: center;
+    opacity:0;
+    border-radius: 5px;
+    animation:lightson .5s ease 3 forwards;
+  }
+
+  @keyframes lightson{
+    0%{
+      opacity:0;
+      text-shadow: 0px 0px 0px #FE1DAD, 0px 0px 0px #FE1DAD, 0px 0px 0px #FE1DAD;
+      box-shadow: 0px 0px 0px 0px #fe1dad, 0px 0px 0px 0px #fe1dad,0px 0px 0px 0px #fe1dad, inset 0px 0px 0px #FE1DAD;
+    }
+    20%{
+      opacity:0.5;
+      text-shadow: 0px 0px 2.5px #FE1DAD, 0px 0px 5px #FE1DAD, 1px 1px 25px #FE1DAD;
+      box-shadow: 0px 0px 5px 0px #fe1dad, 0px 0px 10px 0px #fe1dad,0px 0px 50px 0px #fe1dad, inset 0px 0px 20px #FE1DAD;
+    }
+    40%{
+      opacity:0;
+      text-shadow: 0px 0px 1px #FE1DAD, 0px 0px 2px #FE1DAD, 0px 0px 10px #FE1DAD;
+      box-shadow: 0px 0px 2px 0px #fe1dad, 0px 0px 5px 0px #fe1dad,0px 0px 25px 0px #fe1dad, inset 0px 0px 10px #FE1DAD;
+    }
+    50%{
+      opacity:1;
+      text-shadow: 0px 0px 5px #FE1DAD, 0px 0px 10px #FE1DAD, 1px 1px 50px #FE1DAD;
+      box-shadow: 0px 0px 10px 0px #fe1dad, 0px 0px 20px 0px #fe1dad,0px 0px 100px 0px #fe1dad, inset 0px 0px 30px #FE1DAD;
+    }
+    100%{
+      opacity:1;
+      text-shadow: 0px 0px 5px #FE1DAD, 0px 0px 10px #FE1DAD, 1px 1px 50px #FE1DAD;
+      box-shadow: 0px 0px 10px 0px #fe1dad, 0px 0px 30px 0px #fe1dad,0px 0px 100px 0px #fe1dad, inset 0px 0px 30px #FE1DAD;
+    }
+  }
