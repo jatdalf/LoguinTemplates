@@ -18,9 +18,9 @@
   }
   
   .backgroundVideo {
-    width: 90%;
-    height: 100%;
-    object-fit: cover;    
+    width: 100vw; /* Ancho relativo al ancho de la ventana gráfica (viewport width) */
+    height: 100%; /* Altura del 100% para que se ajuste al alto del contenedor */
+    object-fit: cover; /* Ajuste de la imagen para cubrir el contenedor sin recortar */
   }
   
   .formContainer {

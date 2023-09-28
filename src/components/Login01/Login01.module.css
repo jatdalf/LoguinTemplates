@@ -80,3 +80,27 @@
     }
 
   }
+
+  @media (max-width: 475px) {
+    .centrado{    
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        background-color: rgba(255, 255, 255, 0.85);  
+        color:  #0098A7;
+        margin: 0 auto;    
+        width: 80%;
+        position: relative;
+        margin-top: 8%;
+    }
+    .l1imput{
+        margin-bottom: 4;
+        width: 84%;
+        position: relative;
+        left: 10px;
+        text-align: center;
+        align-items: center;
+        padding: .4rem 0.2rem;    
+        background-color: #e0f2f3;
+       }
+  }
