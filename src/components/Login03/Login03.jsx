@@ -1,20 +1,14 @@
 import React, { useRef, useState, useEffect } from 'react';
 import style from './Login03.module.css';
 //import { carrouselData } from '../../assets/carrouselData';
-import carrouselImg1 from "../../assets/wh1.jpg"
-import carrouselImg2 from "../../assets/wh2.jpg"
-import carrouselImg3 from "../../assets/truck.jpg"
-import carrouselImg4 from "../../assets/wh3.jpg"
-import carrouselImg5 from "../../assets/wh4.jpg"
-
 
 const Login03 = () => {
   const carrouselData = [
-    {id: 1, imgUrl: "src/assets/wh1.jpg"},
-    {id: 2, imgUrl: "../src/assets/wh2.jpg"},
-    {id: 3, imgUrl: "/src/assets/truck.jpg"},
-    {id: 4, imgUrl: {carrouselImg4}},
-    {id: 5, imgUrl: {carrouselImg5}}
+    {id: 1, imgUrl: "https://static.wixstatic.com/media/400291_51d1218e2e8545f59d0c267d75336d01~mv2.jpg/v1/fill/w_614,h_614,al_c,lg_1,q_85,enc_auto/400291_51d1218e2e8545f59d0c267d75336d01~mv2.jpg"},
+    {id: 2, imgUrl: "https://static.wixstatic.com/media/400291_38d95df91fb84781876d283fe938ed44~mv2.jpg/v1/fill/w_1024,h_512,al_c,q_85,enc_auto/400291_38d95df91fb84781876d283fe938ed44~mv2.jpg"},
+    {id: 3, imgUrl: "https://static.wixstatic.com/media/400291_9762f44b737041739268c573e018de9d~mv2.jpg/v1/fill/w_614,h_614,al_c,lg_1,q_85,enc_auto/400291_9762f44b737041739268c573e018de9d~mv2.jpg"},
+    {id: 4, imgUrl: "https://static.wixstatic.com/media/400291_f573080d71fd40258320f2bb429b060a~mv2.jpg/v1/fill/w_614,h_614,al_c,lg_1,q_85,enc_auto/400291_f573080d71fd40258320f2bb429b060a~mv2.jpg"},
+    {id: 5, imgUrl: "https://static.wixstatic.com/media/400291_9539cf4aae394ff8a7adf60528e661eb~mv2.jpg/v1/fill/w_1024,h_512,al_c,q_85,enc_auto/400291_9539cf4aae394ff8a7adf60528e661eb~mv2.jpg"}
   ]
   const imgRef = useRef();
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
