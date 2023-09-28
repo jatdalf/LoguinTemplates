@@ -4,27 +4,29 @@
   rgba(0,0,0,1) 90%), 
   url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/31787/stars.jpg);
 	background-size: cover;
-	z-index:-5;
+	z-index: -20;
 	color: white;
 	overflow: hidden;
 	font-family: 'Monoton', monospace;
 	font-size: 2em;
+  height: 260px;
 }
 
 h1 {
 	animation: neon1 1.5s ease-in-out infinite alternate;
 }
 
-#overlay {
+.overlay {
 	position: absolute;
 	right: 0;
 	left: 0;
 	margin: auto;
 	width: 100%;
 	text-align: center;
+  z-index: 1;
 }
 
-#layer-0 {
+.layer0 {
 	background: rgba(92,71,255,0);
 	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,71,255,1) 100%);
 	
@@ -46,7 +48,7 @@ h1 {
 	z-index: -5;
 }
 
-#layer-1 {
+.layer1 {
 	background: rgba(92,71,255,1);
 	background: -moz-linear-gradient(45deg, rgba(92,71,255,1) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,0) 100%);
 	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(92,71,255,1)), color-stop(50%, rgba(92,71,255,0)), color-stop(100%, rgba(92,71,255,0)));
@@ -63,10 +65,10 @@ h1 {
 	left:0;
 	right: 0;
 	margin: auto;
-	z-index: -5;
+	z-index: -4;
 }
 
-#layer-2 {
+.layer2 {
 	background: rgba(92,71,255,0);
 	background: -moz-linear-gradient(-45deg, rgba(92,71,255,0) 0%, rgba(92,71,255,0) 50%, rgba(92,71,255,1) 100%);
 	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(92,71,255,0)), color-stop(50%, rgba(92,71,255,0)), color-stop(100%, rgba(92,71,255,1)));
@@ -83,10 +85,10 @@ h1 {
 	left:0;
 	right: 0;
 	margin: auto;
-	z-index: -5;
+	z-index: -3;
 }
 
-#layer-corner {
+.layerCorner {
 	background: rgba(71,255,203,1);
 	background: -moz-linear-gradient(top, rgba(71,255,203,1) 0%, rgba(96,130,223,0) 54%, rgba(117,24,240,0) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,255,203,1)), color-stop(54%, rgba(96,130,223,0)), color-stop(100%, rgba(117,24,240,0)));
@@ -102,21 +104,21 @@ h1 {
 	left: 0;
 	right: 0;
 	margin: auto;
-	z-index: -5;
+	z-index: -2;
 	animation: layercorneranim 2.5s ease-in-out infinite alternate;	
 }
 
-#hey {
+.hey {
 	width: 100%;
 	background-color: #011;
 	position: absolute;
 	bottom: 253px; right: 0; left: 0;
 	margin: auto;
-	z-index: -10;
+	z-index: -9;
 	transform: perspective(200px);
 }
 
-#layer-up {
+.layerUp {
 	background: rgba(71,255,203,0);
 	background: -moz-linear-gradient(top, rgba(71,255,203,0) 0%, rgba(71,255,203,0) 50%, rgba(71,255,203,1) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,255,203,0)), color-stop(50%, rgba(71,255,203,0)), color-stop(100%, rgba(71,255,203,1)));
@@ -131,11 +133,11 @@ h1 {
 	position: absolute;
 	bottom:0; left:0; right: 0; margin: auto;
 	overflow: hidden;
-	z-index: -5;
+	z-index: -1;
 	animation: layerupanim 2.5s ease-in-out infinite alternate;	
 }
 
-#lines {
+.lines {
     background-size: 40px 40px;    
     background-image: repeating-linear-gradient(0deg, #60DCD3, #60DCD3 2px, transparent 1px, transparent 40px),repeating-linear-gradient(-90deg, #60DCD3, #60DCD3 2px, transparent 2px, transparent 40px);
     height:400px;
@@ -147,7 +149,7 @@ h1 {
     z-index:-4;
 }
 
-#mtn {
+.mtn {
 	background-color: purple;
 	height:300px;
 	width:1200px;

@@ -3,23 +3,23 @@ import style from './Login06.module.css';
 
 const Login06 = () => {
     return(
-    <div className={style.body}>
-        <div id="overlay">
+    <div  className={style.body}>
+        <div className={style.overlay}>
             <h1>WELCOME</h1>
         </div>
-    // <div id="hey">
-    //     <div id="layer-up"/>
-    // </div>
-    // <div id="layer-0">
-    //     <div id="layer-1">
-    //         <div id="layer-2">
-    //             <div id="lines">
-    //                 <div id="layer-corner"></div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>
-    // <div id="mtnZZZ"/>
+        <div className={style.hey}>
+        <div className={style.layerUp}/>
+        </div>
+        <div className={style.layer0}>
+            <div className={style.layer1}>
+                <div className={style.layer2}>
+                    <div className={style.lines}>
+                        <div className={style.layerCorner}></div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className={style.mtn}/>
     </div>
     )
 }

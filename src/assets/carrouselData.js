@@ -1,7 +1,7 @@
 export const carrouselData = [
     {
         id: 1,
-        imgUrl: "src/assets/wh1.jpg"
+        imgUrl: "../src/assets/wh1.jpg"
     },
     {
         id: 2,
