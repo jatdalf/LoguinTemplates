@@ -1,8 +1,21 @@
 import React, { useRef, useState, useEffect } from 'react';
 import style from './Login03.module.css';
-import { carrouselData } from '../../assets/carrouselData';
+//import { carrouselData } from '../../assets/carrouselData';
+import carrouselImg1 from "../../assets/wh1.jpg"
+import carrouselImg2 from "../../assets/wh2.jpg"
+import carrouselImg3 from "../../assets/truck.jpg"
+import carrouselImg4 from "../../assets/wh3.jpg"
+import carrouselImg5 from "../../assets/wh4.jpg"
+
 
 const Login03 = () => {
+  const carrouselData = [
+    {id: 1, imgUrl: "src/assets/wh1.jpg"},
+    {id: 2, imgUrl: "../src/assets/wh2.jpg"},
+    {id: 3, imgUrl: "/src/assets/truck.jpg"},
+    {id: 4, imgUrl: {carrouselImg4}},
+    {id: 5, imgUrl: {carrouselImg5}}
+  ]
   const imgRef = useRef();
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
   const [username, setUsername] = useState('');
