@@ -4,8 +4,7 @@
     position: fixed; 
     left: 0px; 
     top: 0px; 
-    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
-    
+    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */    
 }
 
 .stretch {
@@ -56,4 +55,28 @@
   .l1btn:hover{
     background-color: #023d3e; 
     color: white;
+  }
+
+  @media (max-width: 767px) {
+    .BgLogin1 {
+        width:200%; 
+        height: 100%; 
+        position: fixed; 
+        left: 0px; 
+        top: 0px; 
+        z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */    
+    }
+
+    .centrado{    
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        background-color: rgba(255, 255, 255, 0.85);  
+        color:  #0098A7;
+        margin: 0 auto;    
+        width: 60%;
+        position: relative;
+        margin-top: 8%;
+    }
+
   }

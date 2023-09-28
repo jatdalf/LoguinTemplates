@@ -1,26 +1,17 @@
 import React from 'react'
 import style from "./Login01.module.css"
 import bgwh from "../../assets/blueWh.jpg"
-import {
-  MDBBtn,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBInput,
-  MDBCheckbox
-}
-from 'mdb-react-ui-kit';
+import { MDBInput } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
+import { Checkbox } from 'antd';
 
 const Loguin01 = () => {
   return (
-    <MDBContainer fluid >
-      <MDBRow className={style.centrado}>
-        <MDBCol col='12'>
-          <MDBCard>
-            <MDBCardBody >
+    <div className={style.loginForm}>
+      <div className={style.centrado}>
+        <div col='12'>
+          <div>
+            <div >
               <h2 className={style.l1H2}>Sign in</h2>
               <p >Please enter your login and password!</p>
 
@@ -30,7 +21,8 @@ const Loguin01 = () => {
 
               <MDBInput className={style.l1imput} label='Email address' id='formControlLg' type='email' size="lg"/>
               <MDBInput className={style.l1imput} label='Password' id='formControlLg' type='password' size="lg"/>
-              <MDBCheckbox name='flexCheck' id='flexCheckDefault' className={style.l1chkbox} label='Remember me' />
+              <input type="checkbox" name='flexCheck' id='flexCheckDefault' className={style.l1chkbox} label='Remember me'/>
+              Remember me
               <Link to="/">
                 <button className={style.l1btn} size='lg' >
                   Login
@@ -38,11 +30,11 @@ const Loguin01 = () => {
               </Link>
               <hr className={style.l1hr}/>  
 
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>    
-    </MDBContainer>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
   )
 }
 
