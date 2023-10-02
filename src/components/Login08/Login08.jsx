@@ -41,7 +41,7 @@ const Login08 = () => {
         </g>
       </svg>
     </div>
-  );
+  ); 
 };
 
 export default Login08;
