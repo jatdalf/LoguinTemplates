@@ -37,8 +37,10 @@
 	justify-content: center;
 	height: 89vh;
 	overflow: hidden;
-	position: absolute;	
-	left: 35%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .formContainer {
