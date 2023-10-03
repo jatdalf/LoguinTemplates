@@ -1,45 +1,32 @@
-/* Define las animaciones */
-@keyframes rotate {
-	from {
-	  transform: rotate(0deg);
-	}
-	to {
-	  transform: rotate(360deg);
-	}
+
+@keyframes spin3D {
+	from { transform: rotateY(0deg); opacity: 0; }
+	to { transform: rotateY(360deg); opacity: 1; }
   }
   
-  @keyframes translateY {
+@keyframes moveUp {
 	from {
-	  transform: translateY(0);
+	  transform: rotateY(0deg) translateY(100vh) translateX(0) ;
 	}
 	to {
-	  transform: translateY(-100vh); /* Eleva el elemento fuera de la pantalla */
+	  transform: rotateY(360deg) translateY(-10vh) translateX(random() * 100vw );
 	}
-  }
-  
-  /* Estilo base para las instancias */
-  .svgWrap {
+}
+
+  .container {
 	position: relative;
-	width: 100%;
 	height: 100vh;
 	overflow: hidden;
   }
   
-  .svgInstance {
+  .instance {
 	position: absolute;
-	width: 100px; /* Ajusta el tamaño según tus necesidades */
-	height: 100px; /* Ajusta el tamaño según tus necesidades */
-	top: 0;
-	left: 0;
-	transform-origin: center center;
-	animation-timing-function: linear;
-  }
-  
-  /* Aplica las animaciones a las instancias */
-  .svgInstance:nth-child(1) {
-	animation: rotate 10s linear infinite, translateY 5s ease-out infinite;
-  }
-  
-  .svgInstance:nth-child(2) {
-	animation: rotate 8s linear infinite, translateY 4s ease-out infinite;
+	bottom: 35em;	
+	width: 5em;
+	height: 5em;
+	animation-name: spin3D, moveUp; /* Aplica ambas animaciones */
+	animation-duration: 7s; /* Duración de la rotación y el movimiento */
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;	
+	opacity: 0;
   }

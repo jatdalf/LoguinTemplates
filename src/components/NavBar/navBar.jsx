@@ -41,7 +41,7 @@ const Header = () => {
         <Link to="/Login07">Neon Lights</Link>
         </Menu.Item>
         <Menu.Item key="8" icon= {<IdcardTwoTone />} >
-        <Link to="/Login08">8</Link>
+        <Link to="/Login08">Multiple Logo Animations</Link>
         </Menu.Item>
       </Menu.SubMenu>
 
