@@ -10,7 +10,7 @@ import Login6 from './components/Login06/Login06';
 import Login7 from './components/Login07/Login07';
 import Login8 from './components/Login08/Login08';
 import Contact from './views/Contact/Contact';
-import About from './views/About/About'
+import About from './views/About/About';
 import Header from './components/NavBar/navBar';
 
 function App({routes}) {
