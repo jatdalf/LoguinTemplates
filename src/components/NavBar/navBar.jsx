@@ -45,12 +45,12 @@ const Header = () => {
         </Menu.Item>
       </Menu.SubMenu>
 
-      <Menu.Item key="r" icon= {<EditTwoTone />} style={{ marginLeft: 'auto' }}>
-        <Link to="/register">Register</Link>
+      <Menu.Item key="c" icon= {<EditTwoTone />} style={{ marginLeft: 'auto' }}>
+        <Link to="/Contact">Contact</Link>
       </Menu.Item>
       
-      <Menu.Item key="l" icon= {<CheckCircleTwoTone />} >
-        <Link to="/login">Login</Link>
+      <Menu.Item key="a" icon= {<CheckCircleTwoTone />} >
+        <Link to="/About">About me</Link>
       </Menu.Item>
      </Menu>
      <Outlet/>
