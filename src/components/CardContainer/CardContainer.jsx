@@ -1,6 +1,5 @@
 import Card from "../Card/Card"
 import style from "./CardContainer.module.css"
-import { useSelector } from "react-redux"
 import Pagination from "../Pagination/pager"
 import { useState } from "react"
 
@@ -56,25 +55,25 @@ const CardContainer = ()=>{
         },
 
         ];
-    const LoguinTemplates = [8]
+    
     //pagination data
     const [currentPage, setCurrentPage] = useState (1)
-    const [cardPerPage] = useState (9)
+    const [cardPerPage] = useState (8)
     const lastCardIndex = currentPage * cardPerPage;
     const fistCardIndex = lastCardIndex - cardPerPage; 
-    const currentCard = LoguinTemplates.slice(fistCardIndex, lastCardIndex)
+    const currentCard = cardData.slice(fistCardIndex, lastCardIndex)
     //end pagination data
     
     return (
         <div>        
-            <div className={style.CardContainer}>
+            <div className={style.paginado}>
             <Pagination 
                 totalCards={cardData.length} 
                 cardPerPage={cardPerPage}                                 
                 setCurrentPage={setCurrentPage}
                 currentPage={currentPage}/>
             </div>
-            <div >          
+            <div className={style.CardContainer}>          
                 {currentCard.map(cardData =>{
                 return <Card
                     key= {cardData.id}

@@ -8,12 +8,12 @@ const Card = (props)=>{
     console.log(props.cardAdress)
 
     return (
-    <div className={style.cardEliminarEstaFrase}>     
+    <div className={style.card}>     
         <Link to={`/${props.cardAdress}`}>
-        {/* <div> 
-            <img className={style.FlagImg} src={props.cardImg} alt={props.cardImg}  width="150em" height="110em"/>
-            <h3>{props.name}</h3>
-        </div> */}
+        <div> 
+            <img className={style.FlagImg} src={props.cardImg} alt={props.cardImg} />
+            <h3  className={style.centered}>{props.name}</h3>
+        </div>
         </Link>    
     </div>)
 }

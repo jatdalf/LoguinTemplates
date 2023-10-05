@@ -6,12 +6,20 @@
     flex-wrap: wrap;
     justify-content: space-around;
     width: 98%;    
-    margin:auto;
+    margin-top: 10px;
 }
+.paginado{
+    display: flex;
+    justify-self: center;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 30px;    
+ }
 
 
 .texto{
-    font-size: 20px;
+    font-size: 15px;
     color:antiquewhite;
     padding-left: 10px;
     padding-right: 10px;
@@ -32,11 +40,3 @@
     background-color: #6f91a0;
 }
 
-.paginado{
-    display: flex;
-    justify-self: center;
-    justify-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;    
- }
