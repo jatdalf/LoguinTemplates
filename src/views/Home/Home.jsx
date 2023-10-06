@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className={style.loginContainer}>
       <div className={style.auroraBorealis}/>
-      <CardContainer></CardContainer>
+        <CardContainer />
     </div>
   )
 }

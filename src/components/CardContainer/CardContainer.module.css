@@ -1,9 +1,9 @@
 .CardContainer{
     border: 1px solid black;
     display: flex;
-    flex-direction: row;
-    border-radius: 15px;
     flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 15px;    
     justify-content: space-around;
     width: 98%;    
     margin-top: 10px;
