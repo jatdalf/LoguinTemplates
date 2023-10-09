@@ -53,6 +53,12 @@ const CardContainer = ()=>{
             cardImg: "https://static.wixstatic.com/media/400291_d0d8d210fb1847fd847bae0416bfbbb2~mv2.jpg",
             cardAdress: "login08"
         },
+        {
+            id:9,
+            name:"Dark and Blue",
+            cardImg: "https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png",
+            cardAdress: "login09"
+        },
 
         ];
     

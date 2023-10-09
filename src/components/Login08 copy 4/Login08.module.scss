@@ -1,0 +1,95 @@
+
+@keyframes spin3D {
+	from { transform: rotateY(0deg); opacity: 0; }
+	to { transform: rotateY(360deg); opacity: 1; }
+  }
+  
+@keyframes moveUp {
+	from {
+	  transform: rotateY(0deg) translateY(100vh) translateX(0) ;
+	}
+	to {
+	  transform: rotateY(360deg) translateY(-10vh) translateX(random() * 100vw );
+	}
+}
+
+  .container {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+  }
+  
+  .instance {
+	position: absolute;
+	bottom: 35em;	
+	width: 5em;
+	height: 5em;
+	animation-name: spin3D, moveUp; /* Aplica ambas animaciones */
+	animation-duration: 7s; /* Duración de la rotación y el movimiento */
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;	
+	opacity: 0;
+  }
+
+.loginContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 89vh;
+	overflow: hidden;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.formContainer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 44vh;	
+  }
+  
+  .formContainer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(33, 166, 162);
+  }
+  
+  .inputContainer {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:  rgb(33, 166, 162);
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
