@@ -2,22 +2,27 @@
 .contact {
     text-align: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background: rgb(30,95,87);
+    background: radial-gradient(circle, rgba(30,95,87,1) 10%, rgba(21,145,136,1) 61%, rgb(2, 74, 74) 100%);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 85vh;
+    max-height: 100vh;
+    overflow: auto;    
   }
   
   h2 {
     font-size: 24px;
-    color: #333;
+    color: rgb(0, 255, 234);
     text-transform: uppercase;
     margin-bottom: 20px;
     animation: text-flicker-in-glow 2s infinite alternate;
+    top: 20vw;
   }
   
   p {
     font-size: 18px;
-    color: #444;
+    color: rgb(0, 255, 234);
     margin: 10px 0;
     animation: text-flicker-in-glow 2s infinite alternate;
   }
