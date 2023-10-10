@@ -1,14 +1,35 @@
-
 .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 20px;
-    background: rgb(30,95,87);
-    background: radial-gradient(circle, rgba(30,95,87,1) 10%, rgba(21,145,136,1) 61%, rgb(2, 74, 74) 100%);
+    background: rgb(30, 95, 87);
+    background: radial-gradient(
+      circle,
+      rgba(30, 95, 87, 1) 10%,
+      rgba(21, 145, 136, 1) 61%,
+      rgb(2, 74, 74) 100%
+    );
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    height: 85vh;
+    min-height: 85vh; /* Cambiado a min-height */
     max-height: 100vh;
-    overflow: auto;    
+    overflow: auto;
+  }
+  
+  /* Agregamos estilos para hacer que el contenido sea responsive */
+  .contact-content {
+    max-width: 80%; /* Ajusta el ancho máximo del contenido */
+    padding: 20px;
+  }
+  
+  /* Estilos para hacer que el contenido sea responsive en dispositivos móviles */
+  @media (max-width: 768px) {
+    .contact-content {
+      max-width: 100%; /* Ajusta el ancho máximo para dispositivos móviles */
+    }
   }
   
   h2 {
