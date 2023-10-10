@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import LogoImg from "../../assets/OcasaLogoSmall.png"
-import style from './Login08.module.scss';
+import style from './Login14.module.scss';
 
-const Login08 = () => {
+const Login14 = () => {
   // Crea un array de 10 elementos vacíos
   const instances = Array.from({ length: 15 }, (_, index) => {
     // Genera un valor aleatorio para 'left' entre 0 y el ancho de la pantalla
@@ -73,4 +73,4 @@ const Login08 = () => {
   ); 
 };
 
-export default Login08;
+export default Login14;
