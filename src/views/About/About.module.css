@@ -58,3 +58,40 @@
     text-align: center;
     color: white;
 }
+.banner{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 25vw;
+    width: 55vw;
+    height: 25vw;
+}
+.bannerItem{    
+    flex: 1;
+    background-color: rebeccapurple;
+    display: flex;
+    transition:  flex-grow 0.2;
+}
+.bannerItem:hover {
+    flex-grow: 10;
+}    
+
+
+.bannerItem:nth-child(1){
+    background-color: darkgreen;
+       
+}
+.bannerItem:nth-child(2){
+    background-color: rgb(100, 62, 0);   
+}
+.bannerItem:nth-child(3){
+    background-color: rgb(6, 5, 28);   
+}
+.bannerItem:nth-child(4){
+    background-color: rgb(123, 3, 67);   
+}
+
+.bannerTitle{
+    color: white;
+    margin: auto;
+}
