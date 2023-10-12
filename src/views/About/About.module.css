@@ -1,0 +1,39 @@
+.aboutContainer {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#263b63, #1770d6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.aboutContent{
+    margin-top: 5vw;
+}
+
+.aboutH1, .myName {
+    display: inline; /* Esto hará que los h1 se muestren en línea. */
+    color: white; /* Establece el color para ambos h1. */
+}
+
+.myName {
+    margin-left: 10px; /* Añade un margen izquierdo para separar los h1. */
+    color: aquamarine;
+}
+
+.pic1 {
+    position: absolute;
+    top: 10%;
+    left: 70vw;
+    border-radius: 60vw;
+    height: 20vw;
+    box-shadow: 0 0 45px rgb(27, 34, 82);
+    border-image: linear-gradient(to bottom, #0c045b 0%, #3a4ed5 100%) 1;
+}
+
+.aboutP1 {
+    text-align: center; /* Centra el texto. */
+    color: white;
+    margin-top: 3vw; /* Añade margen superior para separarlo de los encabezados. */
+}

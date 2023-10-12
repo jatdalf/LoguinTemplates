@@ -1,7 +1,6 @@
 html, body {
     height: 100%;
-    margin: 0;
-    
+    margin: 0;    
   }
   
   .auroraBorealis {
@@ -13,9 +12,9 @@ html, body {
     z-index: -1;
     background: linear-gradient(#05051f, #05051f, #97f7f3, #05051f, #05051f, #05051f, #76f6bd, #aaebc9, #05051f, #05051f, #69c1ff, #cb304f, #05051f, #05051f, #05051f, #05051f, #4a5b8f, #419f91, #05051f, #05051f, #3a4aa1, #db3b69, #05051f);
     background-size: 1800% 1800%;
-    -webkit-animation: Aurora 180s ease;
-    -moz-animation: Aurora 180s ease;
-    animation: Aurora 180s linear infinite;    
+    -webkit-animation: Aurora 140s ease;
+    -moz-animation: Aurora 140s ease;
+    animation: Aurora 140s linear infinite;    
   }
   
   @-webkit-keyframes Aurora {
