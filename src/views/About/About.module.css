@@ -5,21 +5,37 @@
     background: linear-gradient(#263b63, #1770d6);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;    
 }
-.aboutContent{
-    margin-top: 5vw;
+
+.aboutContent {
+    margin-top: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;   
 }
 
 .aboutH1, .myName {
-    display: inline; /* Esto hará que los h1 se muestren en línea. */
-    color: white; /* Establece el color para ambos h1. */
+    display: inline;
+    color: white;
 }
 
-.myName {
-    margin-left: 10px; /* Añade un margen izquierdo para separar los h1. */
+.myName {    
+    margin-left: 10px;
     color: aquamarine;
+    animation: entering-right-left 1s linear 1;
+    
+}
+
+@keyframes entering-right-left {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(0px);
+    }
 }
 
 .pic1 {
@@ -33,7 +49,12 @@
 }
 
 .aboutP1 {
-    text-align: center; /* Centra el texto. */
+    text-align: center;
     color: white;
-    margin-top: 3vw; /* Añade margen superior para separarlo de los encabezados. */
+    margin-top: 2vw;
+}
+
+.aboutP {
+    text-align: center;
+    color: white;
 }

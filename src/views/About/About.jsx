@@ -9,7 +9,16 @@ const About = () => {
         <h1 className={style.aboutH1}>Hi!, I am</h1>
         <h1 className={style.myName}>Jorge</h1>
         <img src={mypic1} className={style.pic1} alt="Jorge's picture" />
-        <p className={style.aboutP1}>Scroll through your area of interest to learn more about me</p>
+        
+        <p className={style.aboutP1}>A full stack developer passionate about technology</p>
+        <p className={style.aboutP}>Scroll through your area of interest to learn more about me</p>
+      </div>
+      <div className={style.banner}>
+        <div className={style.bannerItem}><p className={style.bannerTitle}>Development Skills</p></div>
+        <div className={style.bannerItem}><p className={style.bannerTitle}>Studies</p></div>
+        <div className={style.bannerItem}><p className={style.bannerTitle}>Languages</p></div>
+        <div className={style.bannerItem}><p className={style.bannerTitle}>Job history</p></div>
+        <div className={style.bannerItem}><p className={style.bannerTitle}>Hobbys</p></div>
       </div>
     </div>
   );
