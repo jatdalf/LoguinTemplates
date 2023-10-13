@@ -24,9 +24,11 @@
 
 .myName {    
     margin-left: 10px;
-    color: aquamarine;
-    animation: entering-right-left 1s linear 1;
-    
+    color: aquamarine;    
+    animation-name: entering-right-left;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;    
 }
 
 @keyframes entering-right-left {
@@ -35,8 +37,7 @@
     }
     to {
         transform: translateX(0px);
-    }
-}
+    }}
 
 .pic1 {
     position: absolute;
