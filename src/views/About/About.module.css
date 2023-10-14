@@ -77,7 +77,6 @@
     flex-grow: 10;
 }    
 
-
 .bannerItem:nth-child(1){
     background-color: darkgreen;
        
@@ -95,4 +94,14 @@
 .bannerTitle{
     color: white;
     margin: auto;
+}
+
+.devImg{   
+    width: 0vw;
+    height: 0vw;
+}
+.devImg:hover{   
+    transform:scale();
+    width: 15vw;
+    height: 15vw;
 }

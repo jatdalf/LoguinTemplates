@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './About.module.css';
 import mypic1 from '../../assets/MyPic1.jpg';
+import developerPic from '../../assets/webDevelopment.jpg'
 
 const About = () => {
   return (
@@ -14,11 +15,13 @@ const About = () => {
         <p className={style.aboutP}>Scroll through your area of interest to learn more about me</p>
       </div>
       <div className={style.banner}>
-        <div className={style.bannerItem}><p className={style.bannerTitle}>Dev Skills</p></div>
+        <div className={style.bannerItem}>
+          <img src={developerPic} className={style.devImg} alt="laptop and Smartphone" />
+          <p className={style.bannerTitle}>Dev Skills</p></div>
         <div className={style.bannerItem}><p className={style.bannerTitle}>Studies</p></div>
         <div className={style.bannerItem}><p className={style.bannerTitle}>Languages</p></div>
         <div className={style.bannerItem}><p className={style.bannerTitle}>Job history</p></div>
-        <div className={style.bannerItem}><p className={style.bannerTitle}>Hobbys</p></div>
+        <div className={style.bannerItem}><p className={style.bannerTitle}>Hobbies</p></div>
       </div>
     </div>
   );
