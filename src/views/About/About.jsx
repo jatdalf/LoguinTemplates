@@ -15,9 +15,12 @@ const About = () => {
         <p className={style.aboutP}>Scroll through your area of interest to learn more about me</p>
       </div>
       <div className={style.banner}>
-        <div className={style.bannerItem}>
-          <img src={developerPic} className={style.devImg} alt="laptop and Smartphone" />
-          <p className={style.bannerTitle}>Dev Skills</p></div>
+        <div className={style.bannerItem}>          
+          <p className={style.bannerTitle}>Dev Skills</p>
+          <p className={style.bannerP1}>Full Stack Developer<br/> 
+                                        with skills in React, Javascript, Css<br/>
+                                        </p>
+        </div>
         <div className={style.bannerItem}><p className={style.bannerTitle}>Studies</p></div>
         <div className={style.bannerItem}><p className={style.bannerTitle}>Languages</p></div>
         <div className={style.bannerItem}><p className={style.bannerTitle}>Job history</p></div>

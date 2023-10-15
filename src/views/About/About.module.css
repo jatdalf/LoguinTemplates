@@ -66,20 +66,23 @@
     top: 25vw;
     width: 55vw;
     height: 25vw;
+    
 }
 .bannerItem{    
     flex: 1;
     background-color: rebeccapurple;
     display: flex;
-    transition:  flex-grow 0.2;
+    transition:  flex-grow 0.4;        
 }
 .bannerItem:hover {
     flex-grow: 10;
 }    
 
-.bannerItem:nth-child(1){
+.bannerItem:nth-child(1){    
     background-color: darkgreen;
-       
+    background-image: url(https://static.wixstatic.com/media/400291_cf40e007a4744f248dbc62292fdbaf18~mv2.jpg/v1/fill/w_614,h_614,al_c,lg_1,q_85,enc_auto/400291_cf40e007a4744f248dbc62292fdbaf18~mv2.jpg);
+    background-size: cover;
+    opacity: 0.8;
 }
 .bannerItem:nth-child(2){
     background-color: rgb(100, 62, 0);   
@@ -92,16 +95,7 @@
 }
 
 .bannerTitle{
-    color: white;
+    color:#0c045b;
+    font-weight: 800;
     margin: auto;
-}
-
-.devImg{   
-    width: 0vw;
-    height: 0vw;
-}
-.devImg:hover{   
-    transform:scale();
-    width: 15vw;
-    height: 15vw;
 }
