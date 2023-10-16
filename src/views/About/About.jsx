@@ -19,6 +19,9 @@ const About = () => {
           <p className={style.bannerTitle}>Dev Skills</p>
           <p className={style.bannerP1}>Full Stack Developer<br/> 
                                         with skills in React, Javascript, Css<br/>
+                                        Express, Sequelize, NodeJS, PostgreSql<br/>
+                                        BootsTrap/Chakra, Github, VueJs  <br/>
+                                        React Native.
                                         </p>
         </div>
         <div className={style.bannerItem}><p className={style.bannerTitle}>Studies</p></div>

@@ -65,8 +65,7 @@
     position: absolute;
     top: 25vw;
     width: 55vw;
-    height: 25vw;
-    
+    height: 25vw;    
 }
 .bannerItem{    
     flex: 1;
@@ -74,15 +73,29 @@
     display: flex;
     transition:  flex-grow 0.4;        
 }
-.bannerItem:hover {
-    flex-grow: 10;
+.bannerTitle{
+    color:#0c045b;
+    font-weight: 800;
+    margin: auto;
+}
+.bannerP1{
+    font-size: 20px;
+    text-shadow: 2px 2px 2px 2px 2px rgba(0, 0, 0, 0.6); /* Sombra uniforme en todas las direcciones */
+}
+.bannerItem:hover .bannerP1{   
+    font-size: 20px;
+   
 }    
+.bannerItem:hover {
+    flex-grow: 10;     
+}   
+
 
 .bannerItem:nth-child(1){    
     background-color: darkgreen;
     background-image: url(https://static.wixstatic.com/media/400291_cf40e007a4744f248dbc62292fdbaf18~mv2.jpg/v1/fill/w_614,h_614,al_c,lg_1,q_85,enc_auto/400291_cf40e007a4744f248dbc62292fdbaf18~mv2.jpg);
     background-size: cover;
-    opacity: 0.8;
+    opacity: 0.8;   
 }
 .bannerItem:nth-child(2){
     background-color: rgb(100, 62, 0);   
@@ -99,3 +112,5 @@
     font-weight: 800;
     margin: auto;
 }
+
+
