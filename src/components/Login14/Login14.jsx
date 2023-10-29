@@ -14,7 +14,7 @@ const Login14 = () => {
         className={style.instance}
         alt={`Instance ${index}`}
         style={{
-            animationDelay: `${index * 0.5}s`, // Retardo de animación único para cada instancia
+            animationDelay: `${index * 0.1}s`, // Retardo de animación único para cada instancia
             left: randomLeft, // Establece la posición horizontal aleatoria
             }} />
         );
