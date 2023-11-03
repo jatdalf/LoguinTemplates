@@ -45,10 +45,10 @@ const About = () => {
                                       </p>
         </div>
         <div className={style.bannerItem}><p className={style.bannerTitle}>Experience</p>
-        <p className={style.bannerP1}>(ACADEMIC) Full Stack Web Dev<br/> 
+        <p className={style.bannerP1}>(ACADEMIC) <br/>Full Stack Web Developer<br/> 
                                       Soy Henry <a href='https://www.soyhenry.com/'>(www.soyhenry.com)</a><br/>
                                       Development of a Single Page App<br/>
-                                      Consuming Api and using Database<br/><hr /> 
+                                      Consuming Api and using Database<br/><hr /> <br/>
                                       Development of a website marketplace,<br/>
                                       with payment gateway and authentication,<br/> 
                                       working with a multinational team<br/> 
@@ -58,10 +58,12 @@ const About = () => {
                                       </p>
         </div>
         <div className={style.bannerItem}>
-          <p className={style.bannerTitle}>Hobbies</p>
+          <p className={style.bannerTitle}>Hobbies</p><br/>
             <p className={style.bannerP1}>Love to spend time with family<br/>
-                                          and friends<br/>
-
+                                          and friends<br/><br/>
+                                          I like movies, I love medieval and superhero genres.<br/><br/>
+                                          Used to practice martial Arts<br/>(Karate Do and Kickboxing)<br/><br/>
+                                          I like online games, and play console games with friends
           </p>
         </div>
       </div>
