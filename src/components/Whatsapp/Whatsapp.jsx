@@ -1,12 +1,14 @@
-import React from 'react';
-// This is the way to import an SVG file and then pass it as a props
-import { ReactComponent as CompanyIcon } from './assets/crown.svg';
+import React from "react";
+import wspIcon from '../../assets/WhatsApp-Logo.wine.svg'
+import style from './Whatsapp.module.css'
 
-import { WhatsAppWidget } from 'react-whatsapp-widget';
-import 'react-whatsapp-widget/dist/index.css';
-
-const App = () => {
+const WhatsApp = () => {
     return (
-        <WhatsAppWidget CompanyIcon={CompanyIcon} phoneNumber="XXXXXXXXXX" />
-    );
+        <a href='https://api.whatsapp.com/send?phone=5496207428' className={style.btnwsp}
+        target='_blank' >
+            <img source={wspIcon} className={style.iconwhatsapp}></img>
+        </a>
+           );
 };
+
+export default WhatsApp;

@@ -13,6 +13,7 @@ import Login9 from './components/Login09/Login09';
 import Contact from './views/Contact/Contact';
 import About from './views/About/About';
 import Header from './components/NavBar/navBar';
+import Landing from './views/Landing/Landing';
 
 function App({routes}) {
 
@@ -20,7 +21,8 @@ function App({routes}) {
     <>      
       <Header/>     
       <Routes path="/" element={<Header />}>
-        <Route index element={<Home />} />
+        <Route index element={<Landing />} />
+        <Route path="Home" element={<Home />} />
         <Route path="login01" element={<Login1 />} />
         <Route path="login02" element={<Login2 />} />
         <Route path="login03" element={<Login3 />} />

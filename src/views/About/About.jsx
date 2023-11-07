@@ -58,9 +58,8 @@ const About = () => {
                                       </p>
         </div>
         <div className={style.bannerItem}>
-          <p className={style.bannerTitle}>Hobbies</p><br/>
-            <p className={style.bannerP1}>Love to spend time with family<br/>
-                                          and friends<br/><br/>
+          <p className={style.bannerTitle}>Hobbies</p><br/><br/>
+            <p className={style.bannerP1}>I love gardening, taking care of plants and flowers <br/><br/>
                                           I like movies, I love medieval and superhero genres.<br/><br/>
                                           Used to practice martial Arts<br/>(Karate Do and Kickboxing)<br/><br/>
                                           I like online games, and play console games with friends

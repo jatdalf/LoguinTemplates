@@ -56,10 +56,10 @@ const CardContainer = ()=>{
         {
             id:9,
             name:"Dark and Blue",
-            cardImg: "https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png",
+            cardImg:"https://static.wixstatic.com/media/400291_7576377ce7824e5aaebb47771cd15753~mv2.png/v1/fill/w_1110,h_582,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/400291_7576377ce7824e5aaebb47771cd15753~mv2.png" ,
             cardAdress: "login09"
         },
-
+// "https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png"
         ];
     
     //pagination data

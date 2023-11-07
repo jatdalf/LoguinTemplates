@@ -78,3 +78,11 @@
                    -2px 2px 10px rgba(255, 255, 255, 0.8);
     }
   }
+  .svgContainer{
+    position: absolute;
+    bottom: 20%;
+    left: 49%;
+  }
+  .svg{
+    width: 26px;
+  }
