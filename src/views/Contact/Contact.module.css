@@ -48,14 +48,14 @@
     animation: text-flicker-in-glow 2s infinite alternate;
   }
   
-  a {
+  .contacta {
     color: #0078d4;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
   }
   
-  a:hover {
+  .contacta:hover {
     color: #004272;
   }
   
