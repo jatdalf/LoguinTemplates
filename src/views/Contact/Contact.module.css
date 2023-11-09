@@ -41,7 +41,7 @@
     top: 20vw;
   }
   
-  p {
+  .contactp {
     font-size: 18px;
     color: rgb(0, 255, 234);
     margin: 10px 0;

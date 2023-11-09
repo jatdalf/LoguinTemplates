@@ -6,19 +6,12 @@
     text-decoration: none;
     transition: transform 0.2s ease-in-out; /* Agregamos una transición a la propiedad de transform */    
 }
-.iconwhatsapp:hover{
-    /* Definimos la animación de sacudida */
+.iconwhatsapp:hover{    
     transform: scale(1.3);    
 }
 .iconContent{
-    position: absolute;  
-    left:300px;
-}
-
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(5px); }
+    display:scroll;
+    position:fixed;
+    bottom:30px;
+    right:0px;
 }
