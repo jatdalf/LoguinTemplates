@@ -15,7 +15,7 @@ const Header = () => {
     <>
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
       <Menu.Item key="h" icon= {<HomeTwoTone />}>
-       <Link to="/">Home</Link>       
+       <Link to="/home">Home</Link>       
       </Menu.Item>
       
       <Menu.SubMenu key="s" title="Logins List" style={{ marginLeft: 'auto' }}>
