@@ -2,10 +2,7 @@ import style from "./Card.module.css"
 import {Link} from 'react-router-dom'
 
 const Card = (props)=>{    
-    const data = props
-    console.log(props.cardImg)
-    console.log(props.name)
-    console.log(props.cardAdress)
+    const data = props    
 
     return (
     <div className={style.card}>     

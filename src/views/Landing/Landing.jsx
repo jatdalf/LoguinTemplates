@@ -3,10 +3,10 @@ import style from "./Landing.module.css"
 
 export const Landing = () =>{
     return(        
-        <div > 
-            <h2>Welcome!</h2>
+        <div className={style.landingContainer}> 
+            <h1 className={style.landingH1}>Welcome!</h1>
             <br/><br/>
-            <p>This page shows a list of loguin screens<br/>
+            <p className={style.landingP}>This page shows a list of loguin screens<br/>
             using different techniques, applying react,<br/>
             javascript, css, sass.
             </p>
