@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
-import style from './Login03.module.css';
-//import { carrouselData } from '../../assets/carrouselData';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import style from "./Login03.module.css";
 
 const Login03 = () => {
   const carrouselData = [
@@ -10,98 +10,128 @@ const Login03 = () => {
     {id: 4, imgUrl: "https://static.wixstatic.com/media/400291_f573080d71fd40258320f2bb429b060a~mv2.jpg/v1/fill/w_614,h_614,al_c,lg_1,q_85,enc_auto/400291_f573080d71fd40258320f2bb429b060a~mv2.jpg"},
     {id: 5, imgUrl: "https://static.wixstatic.com/media/400291_9539cf4aae394ff8a7adf60528e661eb~mv2.jpg/v1/fill/w_1024,h_512,al_c,q_85,enc_auto/400291_9539cf4aae394ff8a7adf60528e661eb~mv2.jpg"}
   ]
-  const imgRef = useRef();
-  const [currentImgIndex, setCurrentImgIndex] = useState(0);
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+    const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-  useEffect(() => {
-    const listNode = imgRef.current;
-    const imageNode = listNode.querySelectorAll('li > img')[currentImgIndex];
-    if (imageNode) {
-      imageNode.scrollIntoView({
-        behavior: 'smooth',
-      });
-    }
-  }, [currentImgIndex]);
+  const imageCount = carrouselData.length;
 
-  const goToImg = (imgIdx) => {
-    setCurrentImgIndex(imgIdx);
-  };
-
-  // Función para avanzar automáticamente las imágenes cada 3 segundos
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // Calcular el próximo índice de imagen
-      const nextIndex = (currentImgIndex + 1) % carrouselData.length;
-      setCurrentImgIndex(nextIndex);
-    }, 3000); // Intervalo de 3000 milisegundos (3 segundos)
+      setCurrentImgIndex((index) => (index + 1) % imageCount);
+    }, 3000);
 
-    return () => {
-      // Limpiar el intervalo cuando el componente se desmonte
-      clearInterval(intervalId);
-    };
-  }, [currentImgIndex]);
+    return () => clearInterval(intervalId);
+  }, [imageCount]);
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí puedes manejar la lógica de inicio de sesión con el username y la contraseña
-    console.log('Usuario:', username);
-    console.log('Contraseña:', password);
-    // Luego, puedes enviar estos datos al servidor o realizar cualquier acción necesaria
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSubmitted(true);
   };
 
   return (
-    <div className={style.mainContainer}>
-      <div className={style.sliderContainer}>
-        <div className={style.imagesContainer}>
-          <ul ref={imgRef}>
-            {carrouselData.map((image) => (
-              <li key={image.id}>
-                <img src={image.imgUrl} className={style.imageCss} alt="Carousel Image" />
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className={style.dotsContainer}>
-          {carrouselData.map((_, idx) => (
-            <div
-              key={idx}
-              className={`${style.dotCss} ${idx === currentImgIndex ? style.active : ''}`}
-              onClick={() => goToImg(idx)}
-            >
-              &#9864;
+    <main className={style.page}>
+      <div className={style.layout}>
+        <Link to="/Home" className={style.backLink}>
+          <span aria-hidden="true">←</span> Back to collection
+        </Link>
+
+        <div className={style.mainContainer}>
+          <div className={style.sliderContainer}>
+            <div className={style.imagesContainer}>
+              {carrouselData.map((image, index) => (
+                <img
+                  key={image.id}
+                  src={image.imgUrl}
+                  className={`${style.imageCss} ${
+                    index === currentImgIndex ? style.imageActive : ""
+                  }`}
+                  alt=""
+                  aria-hidden="true"
+                />
+              ))}
             </div>
-          ))}
+
+            <div
+              className={style.dotsContainer}
+              aria-label="Seleccionar imagen"
+            >
+              {carrouselData.map((image, index) => (
+                <button
+                  key={image.id}
+                  type="button"
+                  className={`${style.dot} ${
+                    index === currentImgIndex ? style.active : ""
+                  }`}
+                  aria-label={`Mostrar imagen ${index + 1}`}
+                  aria-pressed={index === currentImgIndex}
+                  onClick={() => setCurrentImgIndex(index)}
+                />
+              ))}
+            </div>
+          </div>
+
+          <section
+            className={style.loginForm}
+            aria-labelledby="login03-title"
+          >
+            <h2 id="login03-title" className={style.title}>
+              Bienvenido
+            </h2>
+
+            <p className={style.subtitle}>
+              Ingresá a tu cuenta.
+            </p>
+
+            <form
+              className={style.form}
+              onSubmit={handleSubmit}
+              onChange={() => setSubmitted(false)}
+            >
+              <label className={style.field}>
+                <span>Usuario</span>
+                <input
+                  className={style.input}
+                  type="text"
+                  name="username"
+                  placeholder="Tu usuario"
+                  autoComplete="username"
+                  value={username}
+                  onChange={(event) => setUsername(event.target.value)}
+                  required
+                />
+              </label>
+
+              <label className={style.field}>
+                <span>Contraseña</span>
+                <input
+                  className={style.input}
+                  type="password"
+                  name="password"
+                  placeholder="Tu contraseña"
+                  autoComplete="current-password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  required
+                />
+              </label>
+
+              <button className={style.submit} type="submit">
+                Iniciar sesión
+              </button>
+
+              {submitted && (
+                <p className={style.feedback} role="status">
+                  Demo completada. No se enviaron datos.
+                </p>
+              )}
+            </form>
+          </section>
         </div>
       </div>
-      <div className={style.loginForm}>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Usuario"
-            value={username}
-            onChange={handleUsernameChange}
-          />
-          <input
-            type="password"
-            placeholder="Contraseña"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-          <button type="submit">Iniciar Sesión</button>
-        </form>
-      </div>
-    </div>
+    </main>
   );
 };
 
-export default Login03
+export default Login03;

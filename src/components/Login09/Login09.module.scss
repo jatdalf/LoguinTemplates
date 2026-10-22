@@ -1,180 +1,301 @@
-.boxBody{
-  margin:0;
-  padding:0;
-  font-family: sans-serif; 
-  background: linear-gradient(#141e30, #243b55);
-  min-height: 100vh; /* Esto garantiza que el fondo se extienda por toda la altura del componente. */
-  display: flex;
-  justify-content: center;
+.page {
+  --accent: #69e3f0;
+
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: calc(100svh - 80px);
+  padding: 88px 24px 40px;
+  background:
+    radial-gradient(
+      ellipse at 50% 65%,
+      rgba(40, 116, 150, 0.18),
+      transparent 60%
+    ),
+    linear-gradient(145deg, #111b2b, #20374e);
+  color: #eef5fc;
+  font-family: "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page,
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
+}
+
+.page .backLink,
+.page .backLink:visited {
+  position: absolute;
+  top: 28px;
+  left: clamp(24px, 6vw, 96px);
+  display: inline-flex;
   align-items: center;
+  gap: 10px;
+  color: #c1cfdf;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.page .backLink:hover {
+  color: var(--accent);
 }
 
 .loginBox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
-  border-radius: 10px;
-}
-
-.loginBox h2 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: #fff;
-  text-align: center;
-}
-
-.loginBox .userBox {
-  position: relative;
-}
-
-.loginBox .userBox input {
   width: 100%;
+  max-width: 410px;
+  padding: 34px;
+  border: 1px solid #3b536a;
+  border-radius: 16px;
+  background: rgba(8, 20, 33, 0.82);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.15em;
+}
+
+.page .title {
+  position: static;
+  margin: 0;
+  padding: 0;
+  color: #eef5fc;
+  font-family: inherit;
+  font-size: 31px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+  text-align: left;
+  text-shadow: none;
+  animation: none;
+  filter: none;
+}
+
+.page .subtitle {
+  margin: 12px 0 32px;
+  color: #adbed0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.form {
+  display: grid;
+  gap: 26px;
+  width: 100%;
+  margin: 0;
+}
+
+/* Etiquetas flotantes */
+
+.userBox {
+  position: relative;
+  min-width: 0;
+  padding-top: 14px;
+}
+
+.page .input {
+  position: static;
+  float: none;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  margin: 0;
   padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
+  border: 0;
+  border-bottom: 1px solid #627b91;
+  border-radius: 0;
   outline: none;
   background: transparent;
+  color: #eef5fc;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  box-shadow: none;
+  caret-color: var(--accent);
+  transition: border-color 180ms ease;
 }
-.loginBox .userBox label {
+
+.page .label {
   position: absolute;
-  top:0;
+  top: 24px;
   left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #b6c7d8;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
   pointer-events: none;
-  transition: .5s;
+  transition:
+    top 180ms ease,
+    font-size 180ms ease,
+    color 180ms ease;
 }
 
-.loginBox .userBox input:focus ~ label,
-.loginBox .userBox input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 12px;
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  top: 0;
+  color: var(--accent);
+  font-size: 11px;
 }
 
-.loginBox form a {
+.page .input:focus {
+  border-bottom-color: var(--accent);
+}
+
+/* Luz que recorre los cuatro bordes */
+
+.page .submit {
   position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #03e9f4;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  margin: 6px 0 0;
+  padding: 14px 20px;
   overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
+  border: 1px solid rgba(105, 227, 240, 0.2);
+  border-radius: 6px;
+  background: rgba(105, 227, 240, 0.04);
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-shadow: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    box-shadow 200ms ease;
 }
 
-.loginBox a:hover {
-  background: #03e9f4;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+.page .submit:hover {
+  background: var(--accent);
+  color: #102837;
+  box-shadow: 0 0 24px rgba(105, 227, 240, 0.2);
 }
 
-.loginBox a span {
+.edge {
   position: absolute;
   display: block;
+  pointer-events: none;
 }
 
-.loginBox a span:nth-child(1) {
+.edge:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: btnAnim1 1s linear infinite;
+  background: linear-gradient(90deg, transparent, var(--accent));
+  animation: topEdge 2s linear infinite;
 }
 
-@keyframes btnAnim1 {
-  0% {
-    left: -100%;
-  }
-  50% {
-    left: 100%;
-  }  
-  100% {
-    left: 100%;
-  }
-}
-
-.loginBox a span:nth-child(2) {
+.edge:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
-  animation: btnAnim2 1s linear infinite;
-  animation-delay: .25s
+  background: linear-gradient(180deg, transparent, var(--accent));
+  animation: rightEdge 2s linear 0.5s infinite;
 }
 
-@keyframes btnAnim2 {
-  0% {
-    top: -100%;
-  }
-  50%{
-    top: 100%;
-  }
-  100% {
-    top: 100%;
-  }
-}
-
-.loginBox a span:nth-child(3) {
-  bottom: 0;
+.edge:nth-child(3) {
   right: -100%;
+  bottom: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
-  animation: btnAnim3 1s linear infinite;
-  animation-delay: .5s
+  background: linear-gradient(270deg, transparent, var(--accent));
+  animation: bottomEdge 2s linear 1s infinite;
 }
 
-@keyframes btnAnim3 {
-  0% {
-    right: -100%;
-  }
-  50%{
-    right: 100%;
-  } 
-  100% {
-    right: 100%;
-  }
-}
-
-.loginBox a span:nth-child(4) {
+.edge:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
-  animation: btnAnim4 1s linear infinite;
-  animation-delay: .75s
+  background: linear-gradient(0deg, transparent, var(--accent));
+  animation: leftEdge 2s linear 1.5s infinite;
 }
 
-@keyframes btnAnim4 {
-  0% {
-    bottom: -100%;
+@keyframes topEdge {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+@keyframes rightEdge {
+  0% { top: -100%; }
+  50%, 100% { top: 100%; }
+}
+
+@keyframes bottomEdge {
+  0% { right: -100%; }
+  50%, 100% { right: 100%; }
+}
+
+@keyframes leftEdge {
+  0% { bottom: -100%; }
+  50%, 100% { bottom: 100%; }
+}
+
+.page .feedback {
+  margin: 0;
+  color: #b7e6dd;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.page .demoNote {
+  margin: 26px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid #30475c;
+  color: #adbed0;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.page button:focus-visible,
+.page a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+  .loginBox {
+    padding: 26px;
   }
-  50%{
-    bottom: 100%;
+
+  .page .title {
+    font-size: 28px;
   }
-  100% {
-    bottom: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edge {
+    animation: none;
+  }
+
+  .page .input,
+  .page .label,
+  .page .submit {
+    transition: none;
   }
 }

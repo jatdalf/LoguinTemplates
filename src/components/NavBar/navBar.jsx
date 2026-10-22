@@ -12,6 +12,9 @@ const templates = [
   { id: "07", name: "Neon Lights" },
   { id: "08", name: "Multiple Logo Animations" },
   { id: "09", name: "Dark and Blue" },
+  { id: "10", name: "Editorial / Paper" },
+  { id: "11", name: "Moonlit Portal" },
+  { id: "12", name: "Prism / Liquid Light" },
 ];
 
 const Header = () => {
@@ -23,7 +26,7 @@ const Header = () => {
   const mobileButtonRef = useRef(null);
   const { pathname } = useLocation();
 
-  const isTemplatePage = /^\/login0[1-9]\/?$/i.test(pathname);
+  const isTemplatePage = /^\/login(?:0[1-9]|1[0-2])\/?$/i.test(pathname);
 
   useEffect(() => {
     setTemplatesOpen(false);

@@ -9,7 +9,215 @@
 }
 
 .centered{
-    align-items: center;
+    align-items: center;.card {
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #2b3b4e;
+  border-radius: 14px;
+  background: #152335;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.card *,
+.card *::before,
+.card *::after {
+  box-sizing: border-box;
+}
+
+.card .cardLink,
+.card .cardLink:visited {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #f5f7fb;
+  text-decoration: none;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.preview {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border-bottom: 1px solid #2b3b4e;
+  background: #0c1522;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 350ms ease;
+}
+
+.preview::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 18, 29, 0.65),
+    transparent 65%
+  );
+  opacity: 0;
+  content: "";
+  transition: opacity 200ms ease;
+}
+
+.previewAction {
+  position: absolute;
+  z-index: 1;
+  bottom: 16px;
+  left: 16px;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 7px;
+  background: #152335;
+  color: #f5f7fb;
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.category {
+  color: #aab7c9;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.number {
+  color: #b5f5d1;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.title {
+  margin: 0 0 24px;
+  color: #f5f7fb;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+  text-shadow: none;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #2b3b4e;
+}
+
+.technology {
+  color: #aab7c9;
+  font-size: 11px;
+}
+
+.explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #b5f5d1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.arrow {
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 200ms ease;
+}
+
+.card:focus-within {
+  border-color: #b5f5d1;
+}
+
+.card .cardLink:focus-visible {
+  outline: 2px solid #b5f5d1;
+  outline-offset: -4px;
+  border-radius: 13px;
+}
+
+.card:focus-within .preview::after,
+.card:focus-within .previewAction {
+  opacity: 1;
+}
+
+.card:focus-within .previewAction {
+  transform: translateY(0);
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: #719c8b;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+  }
+
+  .card:hover .image {
+    transform: scale(1.035);
+  }
+
+  .card:hover .preview::after,
+  .card:hover .previewAction {
+    opacity: 1;
+  }
+
+  .card:hover .previewAction {
+    transform: translateY(0);
+  }
+
+  .card:hover .arrow {
+    transform: translate(2px, -2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .image,
+  .preview::after,
+  .previewAction,
+  .arrow {
+    transition: none;
+  }
+
+  .card:hover,
+  .card:hover .image,
+  .card:hover .arrow {
+    transform: none;
+  }
+}
     display: flex;
     justify-self: center;
     justify-items: center;
@@ -80,4 +288,148 @@
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+.card .preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 13px 13px 0 0;
+}
+
+.card .preview .image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+}
+/* Tipografía y colores de las tarjetas */
+.card .cardLink,
+.card .cardLink * {
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+}
+
+.card .content {
+  padding: 20px 22px;
+  text-align: left;
+}
+
+.card .meta {
+  margin-bottom: 10px;
+}
+
+.card .category {
+  color: #a7b4c5;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.card .number {
+  color: #a7b4c5;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.card .title {
+  margin: 0 0 22px;
+  padding: 0;
+  color: #f1f5f9;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-transform: none;
+}
+
+.card .technology {
+  color: #a7b4c5;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.card .explore {
+  color: #b5f5d1;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.card .arrow {
+  color: inherit;
+  font-size: 18px;
+}
+
+.card .previewAction {
+  color: #f1f5f9;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+/* Un único recorte para las esquinas */
+.card {
+  min-width: 0;
+  height: auto;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.card .preview {
+  flex-shrink: 0;
+  border-radius: 0;
+}
+
+.card .preview .image {
+  border-radius: 0;
+}
+
+/* El contenido determina la altura de la tarjeta */
+.card .cardLink {
+  height: auto;
+  min-width: 0;
+}
+
+.card .content {
+  min-width: 0;
+}
+
+.card .title {
+  display: block;
+  position: static;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  min-height: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.card .meta,
+.card .bottom {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.card .category,
+.card .technology,
+.card .explore {
+  white-space: normal;
+  overflow-wrap: anywhere;
 }

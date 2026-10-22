@@ -1,72 +1,210 @@
-import React from 'react';
-import style from './About.module.css';
-import mypic1 from '../../assets/MyPic1.jpg';
-import developerPic from '../../assets/webDevelopment.jpg'
+import { Link } from "react-router-dom";
+import style from "./About.module.css";
+import mypic1 from "../../assets/MyPic1.jpg";
+
+const skills = [
+  "React",
+  "JavaScript",
+  "TypeScript",
+  "HTML & CSS",
+  "Sass",
+  "Node.js",
+  "Express",
+  "PostgreSQL",
+  "Sequelize",
+  "Supabase",
+  "React Native",
+  "Git & GitHub",
+];
 
 const About = () => {
   return (
-    <div className={style.aboutContainer}>
-      <div className={style.aboutContent}>
-        <h1 className={style.aboutH1}>Hi!, I am</h1>
-        <h1 className={style.myName}>Jorge</h1>
-        <img src={mypic1} className={style.pic1} alt="Jorge's picture" />
-        
-        <p className={style.aboutP1}>A full stack developer passionate about technology</p>
-        <p className={style.aboutP}>Scroll through your area of interest to learn more about me</p>
+    <main className={style.page}>
+      <div className={style.container}>
+        <Link to="/Home" className={style.backLink}>
+          <span aria-hidden="true">←</span> Back to collection
+        </Link>
+
+        <section className={style.hero} aria-labelledby="about-title">
+          <div className={style.intro}>
+            <span className={style.eyebrow}>BEHIND THE INTERFACES</span>
+
+            <h1 id="about-title" className={style.headline}>
+              Hi, I’m Jorge.
+              <span>I like making things work.</span>
+            </h1>
+
+            <p className={style.description}>
+              I’m a full stack developer who enjoys turning ideas
+              into useful applications — from everyday tools to
+              interactive experiences.
+            </p>
+
+            <p className={style.description}>
+              I care about clear interfaces, thoughtful details,
+              and learning through building.
+            </p>
+
+            <Link to="/Contact" className={style.contactButton}>
+              Let’s talk <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
+
+          <figure className={style.portrait}>
+            <img
+              src={mypic1}
+              className={style.photo}
+              alt="Jorge Toso"
+              decoding="async"
+            />
+
+            <figcaption className={style.photoCaption}>
+              <span>JORGE TOSO</span>
+              <span>Developer & curious mind</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <div className={style.sections}>
+          <section className={style.card}>
+            <div className={style.sectionMeta}>
+              <span>01 / TOOLKIT</span>
+              <span aria-hidden="true">↗</span>
+            </div>
+
+            <h2 className={style.sectionTitle}>What I build with.</h2>
+
+            <p className={style.text}>
+              Tools I use across web, mobile, and personal projects.
+            </p>
+
+            <ul className={style.skills} aria-label="Development skills">
+              {skills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className={style.card}>
+            <div className={style.sectionMeta}>
+              <span>02 / LEARNING</span>
+              <span aria-hidden="true">↗</span>
+            </div>
+
+            <h2 className={style.sectionTitle}>A foundation to grow.</h2>
+
+            <ul className={style.entries}>
+              <li>
+                <h3>Full Stack Web Development</h3>
+                <span>Soy Henry Bootcamp</span>
+                <p>
+                  700 hours of theory and individual and team practice.
+                </p>
+              </li>
+
+              <li>
+                <h3>Computer Systems Analysis</h3>
+                <span>IES 21</span>
+                <p>Studies in desktop and web application development.</p>
+              </li>
+
+              <li>
+                <h3>Virtual Simulations & Video Games</h3>
+                <span>IES 21</span>
+              </li>
+            </ul>
+          </section>
+
+          <section className={style.card}>
+            <div className={style.sectionMeta}>
+              <span>03 / PRACTICE</span>
+              <span aria-hidden="true">↗</span>
+            </div>
+
+            <h2 className={style.sectionTitle}>Learning by doing.</h2>
+
+            <ul className={style.entries}>
+              <li>
+                <h3>Personal projects</h3>
+                <p>
+                  Operational workflows, expense tracking,
+                  interactive stories, and card game experiences.
+                  Projects that turn practical needs and creative
+                  ideas into working software.
+                </p>
+              </li>
+
+              <li>
+                <h3>Academic team projects</h3>
+                <p>
+                  Single-page applications with APIs and databases,
+                  and a marketplace with authentication and payment
+                  integration, developed with an international team.
+                </p>
+              </li>
+
+              <li>
+                <h3>Login Templates</h3>
+                <p>
+                  Twelve explorations of layout, animation, and
+                  visual identity — brought together in this collection.
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <section className={style.card}>
+            <div className={style.sectionMeta}>
+              <span>04 / BEYOND CODE</span>
+              <span aria-hidden="true">↗</span>
+            </div>
+
+            <h2 className={style.sectionTitle}>Always curious.</h2>
+
+            <dl className={style.languages}>
+              <div>
+                <dt>Spanish</dt>
+                <dd>Native</dd>
+              </div>
+
+              <div>
+                <dt>English</dt>
+                <dd>C2 Proficient · EF SET certificate</dd>
+              </div>
+
+              <div>
+                <dt>Portuguese</dt>
+                <dd>Basic · One year of training</dd>
+              </div>
+            </dl>
+
+            <p className={style.personalNote}>
+              Away from the keyboard, I enjoy gardening, fantasy
+              and superhero movies, and gaming with friends.
+              I’ve also practiced karate and kickboxing.
+            </p>
+          </section>
+        </div>
+
+        <section className={style.closing}>
+          <div>
+            <span className={style.eyebrow}>HAVE SOMETHING IN MIND?</span>
+            <h2 className={style.closingTitle}>
+              Let’s make a connection.
+            </h2>
+          </div>
+
+          <Link to="/Contact" className={style.closingLink}>
+            Get in touch <span aria-hidden="true">↗</span>
+          </Link>
+        </section>
+
+        <footer className={style.footer}>
+          <span>Login Templates / Jorge Toso</span>
+          <span>Built with curiosity.</span>
+        </footer>
       </div>
-      <div className={style.banner}>
-        <div className={style.bannerItem}>          
-          <p className={style.bannerTitle}>Dev Skills</p>
-          <p className={style.bannerP1}><br/><br/><br/>Full Stack Web Developer<br/> 
-                                        with skills in React, Javascript, Css<br/>
-                                        Express, Sequelize, NodeJS, PostgreSql<br/>
-                                        BootsTrap/Chakra, Github, VueJs  <br/>
-                                        React Native.
-                                        </p>
-        </div>
-        <div className={style.bannerItem}><p className={style.bannerTitle}>Studies</p>
-          <p className={style.bannerP1}>Full Stack Developer<br/> 
-                                      "Soy Henry" Bootcamp.<br/> 700 hours of study<br/> 
-                                      theory, individual and group practice <br/><br/>
-                                      Computer systems analyst<br/>
-                                      IES21ST Century University<br/>
-                                      Desktop and web App dev<br /><br />
-                                      Virtual Simulations and Videogames<br />
-                                      IES21ST Century University<br/>
-                                      </p>
-        </div>
-        <div className={style.bannerItem}><p className={style.bannerTitle}>Languages</p>
-        <p className={style.bannerP1}><br/><br/>English<br/> 
-                                      C2 Proficent Efset Certificate<br/><br/> 
-                                      Portuguese<br/>
-                                      Basic, 1 year training<br/><br/>
-                                      Spanish<br/>
-                                      Native language<br />                                      
-                                      </p>
-        </div>
-        <div className={style.bannerItem}><p className={style.bannerTitle}>Experience</p>
-        <p className={style.bannerP1}>(ACADEMIC) <br/>Full Stack Web Developer<br/> 
-                                      Soy Henry <a href='https://www.soyhenry.com/'>(www.soyhenry.com)</a><br/>
-                                      Development of a Single Page App<br/>
-                                      Consuming Api and using Database<br/><hr /> <br/>
-                                      Development of a website marketplace,<br/>
-                                      with payment gateway and authentication,<br/> 
-                                      working with a multinational team<br/> 
-                                      applying agile technologies<br/>
-                                      <br/><br />  
-                                                                          
-                                      </p>
-        </div>
-        <div className={style.bannerItem}>
-          <p className={style.bannerTitle}>Hobbies</p><br/><br/>
-            <p className={style.bannerP1}>I love gardening, taking care of plants and flowers <br/><br/>
-                                          I like movies, I love medieval and superhero genres.<br/><br/>
-                                          Used to practice martial Arts<br/>(Karate Do and Kickboxing)<br/><br/>
-                                          I like online games, and play console games with friends
-          </p>
-        </div>
-      </div>
-    </div>
+    </main>
   );
 };
 

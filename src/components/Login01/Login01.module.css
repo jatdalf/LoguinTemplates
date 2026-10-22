@@ -1,106 +1,403 @@
-.BgLogin1 {
-    width: 100%; 
-    height: 100%; 
-    position: fixed; 
-    left: 0px; 
-    top: 0px; 
-    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */    
+.page {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - 80px);
+  padding: 36px clamp(24px, 6vw, 96px);
+  background-color: #13273a;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(10, 26, 43, 0.93) 0%,
+      rgba(10, 26, 43, 0.72) 50%,
+      rgba(10, 26, 43, 0.48) 100%
+    ),
+    var(--login-background);
+  background-position: center;
+  background-size: cover;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #f5f7fb;
+  -webkit-font-smoothing: antialiased;
 }
 
-.stretch {
-    width:100%;
-    height:100%;
+.page,
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
 }
-.centrado{    
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    background-color: rgba(255, 255, 255, 0.85);  
-    color:  #0098A7;
-    margin: 0 auto;    
-    width: 30%;
-    position: relative;
-    margin-top: 8%;
+
+.page * {
+  text-shadow: none;
 }
-.l1H2{
-    font-weight: bold;
-    margin-bottom: -2px;
-    text-align: center;
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 410px);
+  align-items: stretch;
+  gap: clamp(40px, 8vw, 120px);
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
 }
-.l1imput{
-    margin-bottom: 4;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    padding: .4rem 0.2rem;    
-    background-color: #e0f2f3;
-   }
-.l1hr{
-    height:  4px;
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding-block: 8px;
 }
-.l1chkbox{
-    margin: 10%;
+
+.page .backLink,
+.page .backLink:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: 8px;
+  color: #d5e2ec;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: none;
 }
-.l1btn{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    font-weight: 800;
-    padding: .3rem 6rem;
-    border-radius: 999px;
-    background-color: #5dbdbf;  
-    width: 50%;
-    border-color: transparent;
+
+.page .backLink:hover {
+  color: #b5f5d1;
+}
+
+.introContent {
+  margin-block: auto;
+  padding-block: 48px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 22px;
+  color: #b5f5d1;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.14em;
+}
+
+.page .headline {
+  position: static;
+  margin: 0;
+  padding: 0;
+  color: #f5f7fb;
+  font-family: inherit;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+  text-align: left;
+}
+
+.page .introText {
+  max-width: 320px;
+  margin: 24px 0 0;
+  color: #c3d0dd;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.signature {
+  color: #b5c4d3;
+  font-size: 11px;
+}
+
+/* Form panel */
+
+.panel {
+  min-width: 0;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  background: #f8faf9;
+  color: #1c3029;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+}
+
+.brandMark {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 26px;
+  place-items: center;
+  border-radius: 11px;
+  background: #203e33;
+  color: #d4f9e4;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+}
+
+.formHeader {
+  margin-bottom: 26px;
+}
+
+.kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: #586c62;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.page .title {
+  position: static;
+  margin: 0;
+  padding: 0;
+  color: #1c3029;
+  font-family: inherit;
+  font-size: 32px;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.page .subtitle {
+  margin: 10px 0 0;
+  color: #5d7066;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  margin: 0;
+}
+
+.field {
+  min-width: 0;
+}
+
+.page .label {
+  display: block;
+  margin: 0 0 8px;
+  color: #2d4438;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.page .input {
+  position: static;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #cbd7d0;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #1c3029;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  box-shadow: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.page .input::placeholder {
+  color: #738078;
+  opacity: 1;
+}
+
+.page .input:focus {
+  border-color: #40745b;
+  box-shadow: 0 0 0 3px rgba(64, 116, 91, 0.13);
+}
+
+.passwordField {
+  position: relative;
+}
+
+.passwordField .input {
+  padding-right: 68px;
+}
+
+.page .passwordToggle {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: grid;
+  width: 54px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #365b47;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.page .passwordToggle:hover {
+  background: #edf3ef;
+}
+
+.page .remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  justify-self: start;
+  margin: 0;
+  color: #52665b;
+  font-size: 12px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.remember input {
+  position: static;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  accent-color: #203e33;
+  cursor: pointer;
+}
+
+.page .submit {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  margin: 2px 0 0;
+  padding: 12px 16px;
+  border: 1px solid #203e33;
+  border-radius: 8px;
+  background: #203e33;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 180ms ease;
+}
+
+.submit span {
+  color: inherit;
+  font-size: 20px;
+}
+
+.page .submit:hover {
+  background: #2d5544;
+}
+
+.page .feedback {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #c7dfcf;
+  border-radius: 8px;
+  background: #eaf4ed;
+  color: #2d5540;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.demoNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #dce5df;
+  color: #61736a;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.noteDot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #508363;
+}
+
+.page button:focus-visible,
+.page a:focus-visible,
+.remember input:focus-visible {
+  outline: 3px solid #69a886;
+  outline-offset: 4px;
+}
+
+@media (max-width: 800px) {
+  .page {
+    padding-block: 28px;
   }
-  .l1btn:hover{
-    background-color: #023d3e; 
-    color: white;
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 500px;
   }
 
-  @media (max-width: 767px) {
-    .BgLogin1 {
-        width:200%; 
-        height: 100%; 
-        position: fixed; 
-        left: 0px; 
-        top: 0px; 
-        z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */    
-    }
-
-    .centrado{    
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        background-color: rgba(255, 255, 255, 0.85);  
-        color:  #0098A7;
-        margin: 0 auto;    
-        width: 60%;
-        position: relative;
-        margin-top: 8%;
-    }
-
+  .introContent {
+    padding-block: 24px 0;
   }
 
-  @media (max-width: 475px) {
-    .centrado{    
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        background-color: rgba(255, 255, 255, 0.85);  
-        color:  #0098A7;
-        margin: 0 auto;    
-        width: 80%;
-        position: relative;
-        margin-top: 8%;
-    }
-    .l1imput{
-        margin-bottom: 4;
-        width: 84%;
-        position: relative;
-        left: 10px;
-        text-align: center;
-        align-items: center;
-        padding: .4rem 0.2rem;    
-        background-color: #e0f2f3;
-       }
+  .eyebrow {
+    margin-bottom: 12px;
   }
+
+  .page .headline {
+    font-size: 40px;
+  }
+
+  .page .introText {
+    max-width: 100%;
+    margin-top: 14px;
+    font-size: 14px;
+  }
+
+  .signature {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .page .title {
+    font-size: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page .input,
+  .page .submit {
+    transition: none;
+  }
+}
+.page .intro .headline {
+  color: #f5f7fb;
+  text-shadow: none !important;
+  filter: none !important;
+  animation: none !important;
+  -webkit-text-stroke: 0;
+}

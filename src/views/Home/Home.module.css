@@ -1,36 +1,107 @@
-html, body {
-    height: 100%;
-    margin: 0;    
+.collection {
+  box-sizing: border-box;
+  min-height: calc(100svh - 80px);
+  padding: 48px clamp(24px, 6vw, 96px) 24px;
+  background:
+    radial-gradient(
+      ellipse at 90% 0%,
+      rgba(91, 143, 133, 0.1),
+      transparent 45%
+    ),
+    #101c2c;
+  color: #f5f7fb;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.heading {
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #b5f5d1;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.title {
+  margin: 0;
+  color: #f5f7fb;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.title span {
+  color: #b5f5d1;
+}
+
+.counter {
+  flex-shrink: 0;
+  padding: 9px 13px;
+  border: 1px solid rgba(181, 245, 209, 0.2);
+  border-radius: 8px;
+  color: #b5f5d1;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.description {
+  max-width: 560px;
+  margin: 16px 0 0;
+  color: #aab7c9;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aab7c9;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .collection {
+    padding-top: 32px;
   }
-  
-  .auroraBorealis {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient(#05051f, #05051f, #97f7f3, #05051f, #05051f, #05051f, #76f6bd, #aaebc9, #05051f, #05051f, #69c1ff, #cb304f, #05051f, #05051f, #05051f, #05051f, #4a5b8f, #419f91, #05051f, #05051f, #3a4aa1, #db3b69, #05051f);
-    background-size: 1800% 1800%;
-    -webkit-animation: Aurora 140s ease;
-    -moz-animation: Aurora 140s ease;
-    animation: Aurora 140s linear infinite;    
+
+  .titleRow {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
   }
-  
-  @-webkit-keyframes Aurora {
-    0% { background-position: 18% 0% }
-    50% { background-position: 83% 100% }
-    100% { background-position: 18% 0% }
+
+  .heading {
+    margin-bottom: 24px;
   }
-  
-  @-moz-keyframes Aurora {
-    0% { background-position: 18% 0% }
-    50% { background-position: 83% 100% }
-    100% { background-position: 18% 0% }
+
+  .description {
+    font-size: 14px;
   }
-  
-  @keyframes Aurora {
-    0% { background-position: 18% 0% }
-    50% { background-position: 83% 100% }
-    100% { background-position: 18% 0% }
-  }
+}

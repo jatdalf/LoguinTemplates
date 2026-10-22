@@ -10,6 +10,9 @@ import Login6 from './components/Login06/Login06';
 import Login7 from './components/Login07/Login07';
 import Login8 from './components/Login08/Login08';
 import Login9 from './components/Login09/Login09';
+import Login10 from "./components/Login10/Login10";
+import Login11 from "./components/Login11/Login11";
+import Login12 from "./components/Login12/Login12";
 import Contact from './views/Contact/Contact';
 import About from './views/About/About';
 import Header from './components/NavBar/navBar';
@@ -32,6 +35,9 @@ function App({routes}) {
         <Route path="login07" element={<Login7 />} />
         <Route path="login08" element={<Login8 />} />
         <Route path="login09" element={<Login9 />} />
+        <Route path="login10" element={<Login10 />} />
+        <Route path="login11" element={<Login11 />} />
+        <Route path="login12" element={<Login12 />} />
         <Route path="Contact" element={<Contact />} />
         <Route path="About" element={<About />} />
       </Routes>

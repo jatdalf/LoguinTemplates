@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import style from './Login07.module.css';
 import bgImage from '../../assets/wallBg.jpg';
+import { Link } from "react-router-dom";
 
 const Login07 = () => {
   const [username, setUsername] = useState('');
@@ -24,6 +25,9 @@ const Login07 = () => {
 
   return (
     <div className={style.NeonBody}>
+  <Link to="/Home" className={style.backLink}>
+    <span aria-hidden="true">←</span> Back to collection
+  </Link>
       <img className={style.neonImg} src={bgImage} alt="Fondo de ladrillos oscuros" />
       <div className={style.loginContainer}>
         <div className={style.logo}>

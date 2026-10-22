@@ -1,124 +1,265 @@
-.mainContainer{
-    width: 50em;
-    height: 25em;
-    margin: 0 auto;    
+.page {
+  display: grid;
+  align-items: center;
+  min-height: calc(100svh - 80px);
+  padding: 28px clamp(24px, 6vw, 96px);
+  background: #edf2f5;
+  color: #243746;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
-.sliderContainer{
-    position: relative;
-    height: 100%;
-    top: 10%;
-}
-.imagesContainer{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    border: 2px solid rgb(54, 48, 48);
-    overflow: hidden;
-}
-.imageCss{
-    width: 500px;
-    height: 400px;
-    position: relative;
-    left: -6%;
-}
-.dotsContainer{
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    color: gray;
-}
-.dotsCss{
-    margin: 8px 3px;    
-    font-size: 14px;
-    text-align: center;    
-    }
 
-.active{
-    color: black;
+.page,
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
 }
+
+.layout {
+  width: 100%;
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.page .backLink,
+.page .backLink:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  color: #36556a;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.page .backLink:hover {
+  color: #176b86;
+}
+
+/* Imagen y formulario comparten un único marco */
+.mainContainer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #d5e0e7;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 16px 44px rgba(24, 49, 67, 0.1);
+}
+
+.sliderContainer {
+  position: relative;
+  min-width: 0;
+  min-height: 420px;
+  overflow: hidden;
+  background: #243746;
+}
+
+.imagesContainer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.page .imageCss {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 650ms ease;
+}
+
+.page .imageActive {
+  opacity: 1;
+}
+
+.dotsContainer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 22px 12px 14px;
+  background: linear-gradient(transparent, rgba(12, 29, 41, 0.55));
+}
+
+.page .dot {
+  position: relative;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dot::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  content: "";
+}
+
+.dot.active::before {
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+/* Panel derecho sin desplazamientos ni márgenes negativos */
 .loginForm {
-    position: relative ;
-    margin-top: -350px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-    left: 495px;
-    width: 275px;
-    height: 353px;
-  }
-  
-  .loginForm input {
-    width: 95%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    position: relative;
-    top: 100px;
-    float: left;
-  }
-  
-  .loginForm button {
-    position: relative;
-    top: 130px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .loginForm button:hover {
-    background-color: #0056b3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 36px 30px;
+  background: #ffffff;
+}
+
+.page .title {
+  position: static;
+  margin: 0;
+  padding: 0;
+  color: #243746;
+  font-family: inherit;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-shadow: none !important;
+  animation: none !important;
+  filter: none;
+}
+
+.page .subtitle {
+  margin: 9px 0 28px;
+  color: #617484;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  margin: 0;
+}
+
+.page .field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  color: #425b6c;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.page .input {
+  position: static;
+  float: none;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #cddae3;
+  border-radius: 8px;
+  outline: none;
+  background: #f8fafc;
+  color: #243746;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  box-shadow: none;
+}
+
+.page .input::placeholder {
+  color: #718392;
+  opacity: 1;
+}
+
+.page .input:focus {
+  border-color: #347b9a;
+  box-shadow: 0 0 0 3px rgba(52, 123, 154, 0.12);
+}
+
+.page .submit {
+  position: static;
+  width: 100%;
+  min-height: 46px;
+  margin: 6px 0 0;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #245a75;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.page .submit:hover {
+  background: #19465d;
+}
+
+.page .feedback {
+  margin: 0;
+  color: #365b50;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.page a:focus-visible,
+.page button:focus-visible {
+  outline: 2px solid #347b9a;
+  outline-offset: 4px;
+}
+
+.page .dot:focus-visible {
+  outline-color: #ffffff;
+  outline-offset: 0;
+}
+
+@media (max-width: 640px) {
+  .mainContainer {
+    grid-template-columns: 1fr;
   }
 
-  @media (max-width: 767px) {
-    .imagesContainer{
-        width: 460px;
-        height: 100%;
-        border-radius: 20px;
-        border: 3px solid rgb(54, 48, 48);
-        overflow: hidden;
-    }
-    .loginForm {
-        position: relative ;
-        margin-top: -280px;
-        padding: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f8f8f8;
-        left: 100px;
-        width: 240px;
-        height: 200px;
-        opacity: 0.8;
-      }
-      .loginForm input {
-        width: 95%;
-        margin-bottom: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        opacity: 100;        
-        border-radius: 10px;
-        position: relative;
-        top: 30px;
-        float: left;
-      }
-      .loginForm button {
-        position: relative;
-        top: 60px;
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px 70px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .dotsContainer{
-        width: 100vw;
-        justify-content: center;
-        cursor: pointer;
-        color: gray;
-    }
+  .sliderContainer {
+    min-height: 240px;
   }
+
+  .loginForm {
+    padding: 28px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page .imageCss {
+    transition: none;
+  }
+}

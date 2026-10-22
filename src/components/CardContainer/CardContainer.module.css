@@ -1,42 +1,19 @@
-.CardContainer{
-    border: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    border-radius: 15px;    
-    justify-content: space-around;
-    width: 98%;    
-    margin-top: 10px;
-}
-.paginado{
-    display: flex;
-    justify-self: center;
-    justify-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 30px;    
- }
-
-
-.texto{
-    font-size: 15px;
-    color:antiquewhite;
-    padding-left: 10px;
-    padding-right: 10px;
+.CardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
 }
 
-.Pbutton{
-    display: inline-block;
-    color: rgb(253, 253, 253);
-    text-decoration: none;
-    border: 3px solid #f6f6f8;
-    padding: 5px 10px 5px 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    font-size: 15px;
- }
-
-.Pbutton:hover{
-    background-color: #6f91a0;
+@media (max-width: 1000px) {
+  .CardContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
 }
 
+@media (max-width: 600px) {
+  .CardContainer {
+    grid-template-columns: 1fr;
+  }
+}
